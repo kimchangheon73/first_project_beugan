@@ -16,9 +16,4 @@ conn.connect();
 module.exports = conn;
 
 
-
-
-
-
-
 // 저 연결 안에 요소값만 바뀔거임
