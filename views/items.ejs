@@ -116,7 +116,7 @@
     </div>
     <div class="bn-box con">
         <div class="img-box">
-            <img src="" alt="너굴맨" height="460px" width="978px">
+            <img src="../img/pexels-karolina-grabowska-4465124.jpg" alt="너굴맨" height="460px" width="978px">
         </div>
     </div>
     <div class="list con">
@@ -125,10 +125,12 @@
 
             <% for(let i=0 ; i<rows.length ; i++){%>
                 <li class="cell">
-                    <div class="img-box"><img src="<%=rows[i].img_link%>" alt=""></div>
-                    <div class="product-name"><%=rows[i].item_name%></div>
+                  <div class="item">
+                   <a href="<%=rows[i].purchase_link%>"><div class="img-box"><img src="<%=rows[i].img_link%>" alt=""></div></a> 
+                   <a href="<%=rows[i].purchase_link%>"><div class="product-name"><%=rows[i].item_name%></div></a>
                     <div class="product-price"><%=rows[i].strike_price%></div>
                     <span><button type="button" class="btn btn-success" id="like">하트</button></span>
+                  </div>
                 </li>
           <% } %> 
                    
