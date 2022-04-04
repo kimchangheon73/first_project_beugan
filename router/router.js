@@ -477,6 +477,7 @@ router.get("/LUSH",function(request,response){
     })
 
 })
+
 router.get("/DearDahlia",function(request,response){
 
     let sql = `select * from beaugan where brand="DearDahlia"`;
@@ -518,6 +519,42 @@ router.post("/join",function(request,response){
 
 });
 
+router.get("/login",function(request,response){
+
+    let id = request.query.id;
+    let pw = request.query.pw;
+    
+    let sql = "select * from beaugan_user where id=? and pw=?";
+
+    conn.query(sql,[id,pw],function(err,rows){
+        if(rows.length>=1){
+
+            request.session.user = {
+                "id" : rows[0].id,
+                "nick" : rows[0].nick
+            }
+            response.render("index",{
+                user : request.session.user
+            })
+
+        }else{
+            console.log("오류가 발생함");
+            console.log(err);
+            response.redirect("http://127.0.0.1:5500/public/login_Fail.html")
+        }
+
+    })
+
+    
+});
+
+router.get("/logout",function(request,response){
+ 
+    delete request.session.user;
+
+    response.redirect("http://127.0.0.1:3000/main")
+
+});
 
 
 
