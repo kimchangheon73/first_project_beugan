@@ -1,4 +1,6 @@
 const express = require('express');
+const req = require('express/lib/request');
+const { commit } = require('../config/DB.js');
 const router = express.Router();
 const conn = require('../config/DB.js');
 
@@ -475,6 +477,7 @@ router.get("/LUSH",function(request,response){
     })
 
 })
+
 router.get("/DearDahlia",function(request,response){
 
     let sql = `select * from beaugan where brand="DearDahlia"`;
@@ -491,4 +494,69 @@ router.get("/DearDahlia",function(request,response){
     })
 
 })
+
+
+router.post("/join",function(request,response){
+    let id = request.body.id;
+    let pw = request.body.pw;
+    let nick = request.body.nick;
+    let user_name = request.body.name;
+    let tel = request.body.tel;
+    let email = request.body.email;
+    let gender = request.body.gender;
+
+    let sql = `insert into beaugan_user values (?,?,?,?,?,?,?)`;
+    // let sql = `insert into beaugan_user values ("1","1","1","1","1","1","1")`;
+    
+
+    conn.query(sql,[id,pw,nick,user_name,tel,email,gender],function(err,rows){
+        if(rows){
+            console.log("성공");
+        }else{
+            console.log(err);
+        }
+    })
+
+});
+
+router.get("/login",function(request,response){
+
+    let id = request.query.id;
+    let pw = request.query.pw;
+    
+    let sql = "select * from beaugan_user where id=? and pw=?";
+
+    conn.query(sql,[id,pw],function(err,rows){
+        if(rows.length>=1){
+
+            request.session.user = {
+                "id" : rows[0].id,
+                "nick" : rows[0].nick
+            }
+            response.render("index",{
+                user : request.session.user
+            })
+
+        }else{
+            console.log("오류가 발생함");
+            console.log(err);
+            response.redirect("http://127.0.0.1:5500/public/login_Fail.html")
+        }
+
+    })
+
+    
+});
+
+router.get("/logout",function(request,response){
+ 
+    delete request.session.user;
+
+    response.redirect("http://127.0.0.1:3000/main")
+
+});
+
+
+
+
 module.exports = router;
