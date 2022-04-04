@@ -1,4 +1,6 @@
 const express = require('express');
+const req = require('express/lib/request');
+const { commit } = require('../config/DB.js');
 const router = express.Router();
 const conn = require('../config/DB.js');
 
@@ -491,4 +493,33 @@ router.get("/DearDahlia",function(request,response){
     })
 
 })
+
+
+router.post("/join",function(request,response){
+    let id = request.body.id;
+    let pw = request.body.pw;
+    let nick = request.body.nick;
+    let user_name = request.body.name;
+    let tel = request.body.tel;
+    let email = request.body.email;
+    let gender = request.body.gender;
+
+    let sql = `insert into beaugan_user values (?,?,?,?,?,?,?)`;
+    // let sql = `insert into beaugan_user values ("1","1","1","1","1","1","1")`;
+    
+
+    conn.query(sql,[id,pw,nick,user_name,tel,email,gender],function(err,rows){
+        if(rows){
+            console.log("성공");
+        }else{
+            console.log(err);
+        }
+    })
+
+});
+
+
+
+
+
 module.exports = router;
