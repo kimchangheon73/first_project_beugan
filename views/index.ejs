@@ -39,7 +39,6 @@
         }
 
 
-        
     </style>
 
 
@@ -50,9 +49,14 @@
         <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/logo02.PNG" alt="" id="logo">
         </a>
+
+
+        
+
   
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-light">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <li><a href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <li><a href="#" class="nav-link px-2 link-light">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <li><a href="#" class="nav-link px-2 link-light">Contents</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <li><a href="#" class="nav-link px-2 link-light">Shop</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -68,11 +72,15 @@
                 </svg>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-<!--             
-              <li><a class="dropdown-item" href="./login.html">로그인</a></li>
-              <li><a class="dropdown-item" href="./Join.html">회원가입</a></li> -->
-              <li><a class="dropdown-item" href="#">마이페이지</a></li>
-              <li><a class="dropdown-item" href="#">로그아웃</a></li>
+            
+                <%if(user==null){%>	
+                    <li><a class="dropdown-item" href="./login.html">로그인</a></li>
+                    <li><a class="dropdown-item" href="./Join.html">회원가입</a></li> 
+                
+                <%}else{%>
+                    <li><a class="dropdown-item" href="#">마이페이지</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:3000/logout">로그아웃</a></li>
+                <%}%>
 
             </ul>
             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -124,7 +132,7 @@
 
   <div class="container">
     <div class="px-4 py-5 my-2">
-        <h4 class="text-center">Md's pick</h4><br>
+        <h4 class="text-center">Md's pick</h1></h4><br><h1>
         <h1 class="display-10 fw-bold text-center">자연을 그대로 담은 향기</h1>
         <p class="lead mb-4 float-none text-center">은은한 벚꽃향부터 매혹적인 장미향까지. <br>어쩌면 당신이 봄이 될지도 몰라요</p>
 

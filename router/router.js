@@ -5,6 +5,14 @@ const router = express.Router();
 const conn = require('../config/DB.js');
 
 
+router.get("/main",function(request,response){
+
+    response.render("index.ejs",{
+        user : request.session.user
+    })
+})
+
+
 router.get("/show_item",function(request,response){
 
     let sql = `select * from beaugan`;
@@ -512,6 +520,10 @@ router.post("/join",function(request,response){
     conn.query(sql,[id,pw,nick,user_name,tel,email,gender],function(err,rows){
         if(rows){
             console.log("성공");
+            response.render("index.ejs",{
+                user : request.session.user
+            })
+        
         }else{
             console.log(err);
         }
@@ -519,10 +531,10 @@ router.post("/join",function(request,response){
 
 });
 
-router.get("/login",function(request,response){
+router.post("/login",function(request,response){
 
-    let id = request.query.id;
-    let pw = request.query.pw;
+    let id = request.body.id;
+    let pw = request.body.pw;
     
     let sql = "select * from beaugan_user where id=? and pw=?";
 
@@ -533,10 +545,13 @@ router.get("/login",function(request,response){
                 "id" : rows[0].id,
                 "nick" : rows[0].nick
             }
-            response.render("index",{
+
+            // ejs는 쌍다옴표 필요 없음 
+            response.render("index.ejs",{
+                id : rows[0].id,
+                nick : rows[0].nick,
                 user : request.session.user
             })
-
         }else{
             console.log("오류가 발생함");
             console.log(err);
@@ -552,8 +567,9 @@ router.get("/logout",function(request,response){
  
     delete request.session.user;
 
-    response.redirect("http://127.0.0.1:3000/main")
-
+    response.render("index.ejs",{
+        user : request.session.user      
+    })
 });
 
 
