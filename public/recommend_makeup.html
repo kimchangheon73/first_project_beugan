@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+           @font-face {
+  font-family: 'Recipekorea';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+        }
+a, a:link {
+    /* 링크 글자 서식 */
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  font-family: 'Recipekorea';
+}    
+.title {
+    /* p.title태그 글자 서식 */
+  color: #000;
+  text-decoration: none;
+  font-family: 'Recipekorea';
+  font-size: 70px;
+}   
+.Que {
+    /* p.Que(질문)태그 글자 서식 */
+  color: #000;
+  text-decoration: none;
+  font-family: 'Recipekorea';
+  font-size: 50px;
+}  
+#box1, #box2, #box3, #box4, #box5 {
+          text-align: center;
+          line-height:300px;
+          box-shadow: 7px 7px 5px gray;
+          width:300px;
+          height: 300px;
+          border: 2px solid black;
+          box-sizing: border-box;
+      }
+/* contain은 사진도 같이 작아지고
+cover은 사진 잘림 물어보자 ! */
+
+      #box1 {
+background:url("./img/KakaoTalk_20220328_205207764_01.png");
+background-repeat: no-repeat;
+
+background-size: contain;
+background-position: center center;
+width: 300px;
+height: 300px;
+}
+#bi me-2{
+  background:url("./img/KakaoTalk_20220328_205207764_03.png");
+}
+    #logo{
+  height: 300px;
+}
+  </style>
+
+
+
+
+</head>
+<body>
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32" role="img" aria-label="부트스트랩"><use xlink:href="#bootstrap"></use></svg>
+      <img src="./img/KakaoTalk_20220328_205207764_11.png" alt="" id="logo">
+    
+    </a>
+
+  
+
+    <div class="col-md-3 text-end">
+      <button type="button" class="btn btn-outline-primary me-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MENU</font></font></button>
+    
+    </div>
+  </header>
+
+
+  <div><br><p class="title" align = "center">재미로보는 비건제품 추천</p></div>
+  <br><br><br>
+  
+  <p class = "Que" align = "center">나는 이런 메이크업을 원해!</p>
+  <div class="container">
+      
+   
+      <div class="row gx-5">
+          <div class="col p-5 border-light">
+              <div id="box1"><a href="#">나는 잡티없는 피부를 원해!</a></div> 
+          </div> 
+          <div class="col p-5 border-light">
+               <div id="box2"><a href="#">나는 키스를 부르는 입술을 갖고싶어!</a></div>
+          </div> 
+          <div class="col p-5 border-light">
+              <div id="box2"><a href="#">나는 불꽃카리스마 눈빛을 갖고싶어!</a></div>
+         </div> 
+          
+        <div class="col p-5 border-light">
+          <div id="box4"><a href="#" >나는 얼굴에 생기가 생기면 좋겠어!</a></div>
+          </div> 
+
+      </div>
+  </div>
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© 2021 회사, Inc</font></font></p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">집</font></font></a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">특징</font></font></a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">가격</font></font></a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">자주 묻는 질문</font></font></a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">에 대한</font></font></a></li>
+    </ul>
+  </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> 
+
+</body>
+</html>
