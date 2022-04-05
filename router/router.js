@@ -6,7 +6,7 @@ const conn = require('../config/DB.js');
 
 
 router.get("/main",function(request,response){
-
+    
     response.render("index.ejs",{
         user : request.session.user
     })

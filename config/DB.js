@@ -12,7 +12,6 @@ let conn = mysql.createConnection({
 // DB연결 
 conn.connect();
 
-
 module.exports = conn;
 
 
