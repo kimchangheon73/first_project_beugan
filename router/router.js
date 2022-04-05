@@ -666,7 +666,7 @@ router.get("/random_skincare_toner",function(request,response){
         }
     })
 })
-router.get("/random_skincare_ampouleserum",function(request,response){
+router.get("/random_skincare_serum",function(request,response){
 
     let sql = `select * from beaugan where L_category="SKINCARE" and S_category="AMPOULE/SERUM"`;
 
