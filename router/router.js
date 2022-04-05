@@ -728,7 +728,7 @@ router.get("/random_body_perfume",function(request,response){
         }
     })
 })
-router.get("/random_body_hair",function(request,response){
+router.get("/random_body_lotion",function(request,response){
 
     let sql = `select * from beaugan where L_category="BODY" and S_category="LOTION"`;
 
@@ -745,5 +745,57 @@ router.get("/random_body_hair",function(request,response){
 })
 
 
+router.get("/random_cleansing_face",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="CLEANSING" and S_category="FACE"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+
+
+router.get("/random_cleansing_hair",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="CLEANSING" and S_category="HAIR"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+
+
+router.get("/random_cleansing_body",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="CLEANSING" and S_category="BODY"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
 
 module.exports = router;
