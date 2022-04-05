@@ -14,5 +14,14 @@
     "express-mysql-session": "^2.1.7",
     "express-session": "^1.17.2",
     "mysql": "^2.18.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2022-SMHRD-KDT-AI-3/CodingNatorAddress.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/2022-SMHRD-KDT-AI-3/CodingNatorAddress/issues"
+  },
+  "homepage": "https://github.com/2022-SMHRD-KDT-AI-3/CodingNatorAddress#readme"
 }
