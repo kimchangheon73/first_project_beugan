@@ -1,5 +1,6 @@
 const express = require('express');
 const req = require('express/lib/request');
+const res = require('express/lib/response');
 const { commit } = require('../config/DB.js');
 const router = express.Router();
 const conn = require('../config/DB.js');
@@ -578,6 +579,26 @@ router.get("/mypage_main",function(request,response){
     response.render("mypage_main.ejs",{
         user : request.session.user
     })
+})
+
+router.get("/random_sun",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="SUN"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+            console.log("랜덤 선 라우터 호출성공");
+        } else {
+            console.log(err);
+        }
+    })
+    
+
 })
 
 
