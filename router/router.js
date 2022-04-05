@@ -592,7 +592,6 @@ router.get("/random_sun",function(request,response){
             response.render("random_result.ejs",{
                 rows : rows
             })
-            console.log("랜덤 선 라우터 호출성공");
         } else {
             console.log(err);
         }
@@ -601,7 +600,71 @@ router.get("/random_sun",function(request,response){
 
 })
 
+router.get("/random_makeup_base",function(request,response){
+    
 
+    let sql = `select * from beaugan where L_category="MAKEUP" and S_category="BASE"`;
 
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
 
+router.get("/random_makeup_lips",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="MAKEUP" and S_category="LIPS"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+
+router.get("/random_makeup_eye",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="MAKEUP" and S_category="EYE"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+
+router.get("/random_makeup_blush",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="MAKEUP" and S_category="BLUSH"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
 module.exports = router;
