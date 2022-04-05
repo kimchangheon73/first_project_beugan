@@ -573,6 +573,14 @@ router.get("/logout",function(request,response){
 });
 
 
+router.get("/mypage_main",function(request,response){
+
+    response.render("mypage_main.ejs",{
+        user : request.session.user
+    })
+})
+
+
 
 
 module.exports = router;
