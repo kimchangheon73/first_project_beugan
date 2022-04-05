@@ -21,7 +21,9 @@ router.get("/show_item",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -38,7 +40,9 @@ router.get("/skin_item",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -55,7 +59,9 @@ router.get("/makeup_item",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -72,7 +78,9 @@ router.get("/cleansing_item",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -89,7 +97,9 @@ router.get("/body_item",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -106,7 +116,9 @@ router.get("/sun_item",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -123,7 +135,9 @@ router.get("/other_item",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -140,7 +154,9 @@ router.get("/skin_item_LIPCARE",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -157,7 +173,9 @@ router.get("/skin_item_AMPOULE_SERUM",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -174,7 +192,9 @@ router.get("/skin_item_TONER",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -191,7 +211,9 @@ router.get("/skin_item_CREAM",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -208,7 +230,9 @@ router.get("/skin_item_FACE",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -225,7 +249,9 @@ router.get("/skin_item_LOTION",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -242,7 +268,9 @@ router.get("/makeup_item_BLUSH",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -259,7 +287,9 @@ router.get("/makeup_item_EYE",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -276,7 +306,9 @@ router.get("/makeup_item_BASE",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -293,7 +325,9 @@ router.get("/makeup_item_LIPS",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -310,7 +344,9 @@ router.get("/makeup_item_LIPCARE",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -327,7 +363,9 @@ router.get("/cleansing_item_FACE",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -344,7 +382,9 @@ router.get("/cleansing_item_HAIR",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -361,7 +401,9 @@ router.get("/cleansing_item_BODY",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -378,7 +420,9 @@ router.get("/body_item_LOTION",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -395,7 +439,9 @@ router.get("/body_item_FACE",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -412,7 +458,9 @@ router.get("/body_item_PERFUME",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -429,7 +477,9 @@ router.get("/athe",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -446,7 +496,9 @@ router.get("/melixir",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -463,7 +515,9 @@ router.get("/LUSH",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -480,7 +534,9 @@ router.get("/DearDahlia",function(request,response){
         if (rows) {
             console.log(rows);
             response.render("items",{
-                rows : rows
+                rows : rows,
+                user : request.session.user
+
             })
         } else {
             console.log(err);
@@ -681,6 +737,7 @@ router.get("/random_skincare_serum",function(request,response){
         }
     })
 })
+
 router.get("/random_skincare_cream",function(request,response){
 
     let sql = `select * from beaugan where L_category="SKINCARE" and S_category="CREAM" or L_category="SKINCARE" and S_category="LOTION"`;
@@ -696,6 +753,7 @@ router.get("/random_skincare_cream",function(request,response){
         }
     })
 })
+
 router.get("/random_skincare_lipcare",function(request,response){
 
     let sql = `select * from beaugan where L_category="SKINCARE" and S_category="LIPCARE"`;
@@ -728,6 +786,7 @@ router.get("/random_body_perfume",function(request,response){
         }
     })
 })
+
 router.get("/random_body_lotion",function(request,response){
 
     let sql = `select * from beaugan where L_category="BODY" and S_category="LOTION"`;
@@ -743,7 +802,6 @@ router.get("/random_body_lotion",function(request,response){
         }
     })
 })
-
 
 router.get("/random_cleansing_face",function(request,response){
     
@@ -762,7 +820,6 @@ router.get("/random_cleansing_face",function(request,response){
     })
 })
 
-
 router.get("/random_cleansing_hair",function(request,response){
     
 
@@ -779,7 +836,6 @@ router.get("/random_cleansing_hair",function(request,response){
         }
     })
 })
-
 
 router.get("/random_cleansing_body",function(request,response){
     
