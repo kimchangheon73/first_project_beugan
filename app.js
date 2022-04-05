@@ -8,11 +8,11 @@ const session = require("express-session")
 const session_mysql_save = require('express-mysql-session')
 
 let DB_info ={
-    host: '127.0.0.1',
-    user: 'root',
-    password: '1234',
-    port: '3306',
-    database: 'BeauGan_item'
+    host: 'project-db-stu.ddns.net',
+    user: 'campus_g_0325_6',
+    password: 'smhrd6',
+    port: '3307',
+    database: 'campus_g_0325_6'
 }
 
 // DB정보를 session_mysql에 등록해줘야 함 

@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/2022-SMHRD-KDT-AI-3/CodingNatorAddress/issues"
   },
-  "homepage": "https://github.com/2022-SMHRD-KDT-AI-3/CodingNatorAddress#readme"
+  "homepage": "https://github.com/2022-SMHRD-KDT-AI-3/CodingNatorAddress#readme",
+  "devDependencies": {}
 }

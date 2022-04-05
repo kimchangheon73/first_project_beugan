@@ -12,7 +12,6 @@ router.get("/main",function(request,response){
     })
 })
 
-
 router.get("/show_item",function(request,response){
 
     let sql = `select * from beaugan`;
@@ -132,7 +131,6 @@ router.get("/other_item",function(request,response){
 
 })
 
-
 router.get("/skin_item_LIPCARE",function(request,response){
 
     let sql = `select * from beaugan where L_category="SKINCARE" and S_category="LIPCARE"` ;
@@ -235,7 +233,6 @@ router.get("/skin_item_LOTION",function(request,response){
 
 })
 
-
 router.get("/makeup_item_BLUSH",function(request,response){
 
     let sql = `select * from beaugan where L_category="MAKEUP" and S_category="BLUSH"` ;
@@ -253,7 +250,6 @@ router.get("/makeup_item_BLUSH",function(request,response){
 
 })
 
-
 router.get("/makeup_item_EYE",function(request,response){
 
     let sql = `select * from beaugan where L_category="MAKEUP" and S_category="EYE"` ;
@@ -270,7 +266,6 @@ router.get("/makeup_item_EYE",function(request,response){
     })
 
 })
-
 
 router.get("/makeup_item_FACE",function(request,response){
 
@@ -306,8 +301,6 @@ router.get("/makeup_item_LIPS",function(request,response){
 
 })
 
-
-
 router.get("/makeup_item_LIPCARE",function(request,response){
 
     let sql = `select * from beaugan where L_category="MAKEUP" and S_category="LIPCARE"` ;
@@ -324,7 +317,6 @@ router.get("/makeup_item_LIPCARE",function(request,response){
     })
 
 })
-
 
 router.get("/cleansing_item_FACE",function(request,response){
 
@@ -360,7 +352,6 @@ router.get("/cleansing_item_HAIR",function(request,response){
 
 })
 
-
 router.get("/cleansing_item_BODY",function(request,response){
 
     let sql = `select * from beaugan where L_category="CLEANSING" and S_category="BODY"`;
@@ -377,8 +368,6 @@ router.get("/cleansing_item_BODY",function(request,response){
     })
 
 })
-
-
 
 router.get("/body_item_LOTION",function(request,response){
 
@@ -397,7 +386,6 @@ router.get("/body_item_LOTION",function(request,response){
 
 })
 
-
 router.get("/body_item_FACE",function(request,response){
 
     let sql = `select * from beaugan where L_category="BODY" and S_category="FACE"`;
@@ -415,8 +403,6 @@ router.get("/body_item_FACE",function(request,response){
 
 })
 
-
-
 router.get("/body_item_PERFUME",function(request,response){
 
     let sql = `select * from beaugan where L_category="BODY" and S_category="PERFUME"`;
@@ -433,7 +419,6 @@ router.get("/body_item_PERFUME",function(request,response){
     })
 
 })
-
 
 router.get("/athe",function(request,response){
 
@@ -503,7 +488,6 @@ router.get("/DearDahlia",function(request,response){
 
 })
 
-
 router.post("/join",function(request,response){
     let id = request.body.id;
     let pw = request.body.pw;
@@ -571,7 +555,6 @@ router.get("/logout",function(request,response){
         user : request.session.user      
     })
 });
-
 
 router.get("/mypage_main",function(request,response){
 
