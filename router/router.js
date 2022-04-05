@@ -564,7 +564,186 @@ router.get("/mypage_main",function(request,response){
     })
 })
 
+router.get("/random_sun",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="SUN"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+    
+
+})
+
+router.get("/random_makeup_base",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="MAKEUP" and S_category="BASE"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+
+router.get("/random_makeup_lips",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="MAKEUP" and S_category="LIPS"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+
+router.get("/random_makeup_eye",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="MAKEUP" and S_category="EYE"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+
+router.get("/random_makeup_blush",function(request,response){
+    
+
+    let sql = `select * from beaugan where L_category="MAKEUP" and S_category="BLUSH"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+//스킨케어 추천 라우터
+router.get("/random_skincare_toner",function(request,response){
+
+    let sql = `select * from beaugan where L_category="SKINCARE" and S_category="TONER"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+router.get("/random_skincare_ampouleserum",function(request,response){
+
+    let sql = `select * from beaugan where L_category="SKINCARE" and S_category="AMPOULE/SERUM"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+router.get("/random_skincare_cream",function(request,response){
+
+    let sql = `select * from beaugan where L_category="SKINCARE" and S_category="CREAM" or L_category="SKINCARE" and S_category="LOTION"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+router.get("/random_skincare_lipcare",function(request,response){
+
+    let sql = `select * from beaugan where L_category="SKINCARE" and S_category="LIPCARE"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+
+//바디 추천 라우터
+router.get("/random_body_perfume",function(request,response){
+
+    let sql = `select * from beaugan where L_category="BODY" and S_category="PERFUME"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+router.get("/random_body_hair",function(request,response){
+
+    let sql = `select * from beaugan where L_category="BODY" and S_category="LOTION"`;
+
+    conn.query(sql, function (err, rows) {
+        if (rows) {
+            console.log(rows);
+            response.render("random_result.ejs",{
+                rows : rows
+            })
+        } else {
+            console.log(err);
+        }
+    })
+})
+
 
 
 module.exports = router;
-
