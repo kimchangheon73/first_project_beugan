@@ -431,24 +431,24 @@ router.get("/body_item_LOTION",function(request,response){
 
 })
 
-router.get("/body_item_FACE",function(request,response){
+// router.get("/body_item_FACE",function(request,response){
 
-    let sql = `select * from beaugan where L_category="BODY" and S_category="FACE"`;
+//     let sql = `select * from beaugan where L_category="BODY" and S_category="FACE"`;
 
-    conn.query(sql, function (err, rows) {
-        if (rows) {
-            console.log(rows);
-            response.render("items",{
-                rows : rows,
-                user : request.session.user
+//     conn.query(sql, function (err, rows) {
+//         if (rows) {
+//             console.log(rows);
+//             response.render("items",{
+//                 rows : rows,
+//                 user : request.session.user
 
-            })
-        } else {
-            console.log(err);
-        }
-    })
+//             })
+//         } else {
+//             console.log(err);
+//         }
+//     })
 
-})
+// })
 
 router.get("/body_item_PERFUME",function(request,response){
 
