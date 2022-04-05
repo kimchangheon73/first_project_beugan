@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        #logo{
+            height: 45px;
+        }
+        a.dropdown-item{
+            text-align: end;
+        }
+
+        body>header, footer{
+            background-color: #093023;
+        }
+
+        p {
+            float:inline-end;
+        }
+        .card{
+          width: 250px;
+        }
+
+        #degimg{
+          transform: rotate(270deg);
+
+        }
+        .contents {
+          width: 100%;
+        }
+
+#help,#help2,#help3,#help4,#help5,#help10,#help11,#help12,#help13,#help14{
+  color: white;
+  font-family: Helvetica Nene;
+}
+#help6,#help7,#help8,#help9{
+  color: black;
+  font-family: Helvetica Nene;
+  text-align: end;
+}
+
+
+main{
+  background-color: white;
+}
+body{
+  background-color: rgb(238,238,238);
+}
+
+.card-body{
+    text-align: center;
+}
+
+        
+    </style>
+
+
+</head>
+<body>
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+        
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./img/logo02.PNG" alt="" id="logo">
+        </a>
+  
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-light" id="help">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <li><a href="#" class="nav-link px-2 link-light" id="help2">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <li><a href="#" class="nav-link px-2 link-light" id="help3">Contents</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <li><a href="#" class="nav-link px-2 link-light" id="help4">Shop</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <li><a href="#" class="nav-link px-2 link-light" id="help5">Recommend</a></li>
+        </ul>
+  
+        <div class="col-md-3 text-end">
+          <div class="dropdown">
+            <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="./login.html" id="help6">로그인</a></li>
+              <li><a class="dropdown-item" href="./Join.html" id="help7">회원가입</a></li>
+              <li><a class="dropdown-item" href="#" id="help8">마이페이지</a></li>
+              <li><a class="dropdown-item" href="#" id="help9">로그아웃</a></li>
+
+            </ul>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+    </header>
+
+    <!-- <main class="container my-5 justify-content-center"> -->
+              <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                  <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">앨범 예</font></font></h1>
+                    <p class="lead text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">아래 앨범에 대한 간략한 설명(내용, 제작자 등). </font><font style="vertical-align: inherit;">짧고 귀엽게 유지하되 너무 짧지 않도록 하여 사람들이 이 앨범을 완전히 건너뛰지 않도록 합니다.</font></font></p>
+                    <p>
+                      <a href="#" class="btn btn-primary my-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">주요 행동 촉구</font></font></a>
+                      <a href="#" class="btn btn-secondary my-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2차 작업</font></font></a>
+                    </p>
+                  </div>
+                </div>
+              </section>
+            
+              <div class="album py-5 bg-light">
+                <div class="container">
+            
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자리 표시자: 썸네일" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">이것은 추가 콘텐츠에 대한 자연스러운 소개로 아래에 지원 텍스트가 있는 더 넓은 카드입니다. </font><font style="vertical-align: inherit;">이 내용은 조금 더 깁니다.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">보여 주다</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">개정</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9분</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자리 표시자: 썸네일" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">이것은 추가 콘텐츠에 대한 자연스러운 소개로 아래에 지원 텍스트가 있는 더 넓은 카드입니다. </font><font style="vertical-align: inherit;">이 내용은 조금 더 깁니다.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">보여 주다</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">개정</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9분</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자리 표시자: 썸네일" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">이것은 추가 콘텐츠에 대한 자연스러운 소개로 아래에 지원 텍스트가 있는 더 넓은 카드입니다. </font><font style="vertical-align: inherit;">이 내용은 조금 더 깁니다.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">보여 주다</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">개정</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9분</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자리 표시자: 썸네일" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">이것은 추가 콘텐츠에 대한 자연스러운 소개로 아래에 지원 텍스트가 있는 더 넓은 카드입니다. </font><font style="vertical-align: inherit;">이 내용은 조금 더 깁니다.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">보여 주다</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">개정</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9분</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자리 표시자: 썸네일" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">이것은 추가 콘텐츠에 대한 자연스러운 소개로 아래에 지원 텍스트가 있는 더 넓은 카드입니다. </font><font style="vertical-align: inherit;">이 내용은 조금 더 깁니다.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">보여 주다</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">개정</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9분</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자리 표시자: 썸네일" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">이것은 추가 콘텐츠에 대한 자연스러운 소개로 아래에 지원 텍스트가 있는 더 넓은 카드입니다. </font><font style="vertical-align: inherit;">이 내용은 조금 더 깁니다.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">보여 주다</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">개정</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9분</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자리 표시자: 썸네일" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">이것은 추가 콘텐츠에 대한 자연스러운 소개로 아래에 지원 텍스트가 있는 더 넓은 카드입니다. </font><font style="vertical-align: inherit;">이 내용은 조금 더 깁니다.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">보여 주다</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">개정</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9분</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자리 표시자: 썸네일" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">이것은 추가 콘텐츠에 대한 자연스러운 소개로 아래에 지원 텍스트가 있는 더 넓은 카드입니다. </font><font style="vertical-align: inherit;">이 내용은 조금 더 깁니다.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">보여 주다</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">개정</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9분</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자리 표시자: 썸네일" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">이것은 추가 콘텐츠에 대한 자연스러운 소개로 아래에 지원 텍스트가 있는 더 넓은 카드입니다. </font><font style="vertical-align: inherit;">이 내용은 조금 더 깁니다.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">보여 주다</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">개정</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9분</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+      
+<!-- </main> -->
+
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+    <p class="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help10">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help11">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help12">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help13">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help14">About</a></li>
+    </ul>
+  </footer>
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      
+</body>
+</html>
+
