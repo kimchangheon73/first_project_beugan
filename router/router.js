@@ -728,7 +728,7 @@ router.get("/random_body_perfume",function(request,response){
         }
     })
 })
-router.get("/random_body_hair",function(request,response){
+router.get("/random_body_lotion",function(request,response){
 
     let sql = `select * from beaugan where L_category="BODY" and S_category="LOTION"`;
 
