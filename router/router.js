@@ -1,5 +1,6 @@
 const express = require('express');
 const req = require('express/lib/request');
+const res = require('express/lib/response');
 const { commit } = require('../config/DB.js');
 const router = express.Router();
 const conn = require('../config/DB.js');
@@ -563,99 +564,7 @@ router.get("/mypage_main",function(request,response){
     })
 })
 
-//스킨케어 추천 라우터
-router.get("/random_skincare_toner",function(request,response){
 
-    let sql = `select * from beaugan where L_category="SKINCARE" and S_category="TONER"`;
-
-    conn.query(sql, function (err, rows) {
-        if (rows) {
-            console.log(rows);
-            response.render("random_result.ejs",{
-                rows : rows
-            })
-        } else {
-            console.log(err);
-        }
-    })
-})
-router.get("/random_skincare_ampouleserum",function(request,response){
-
-    let sql = `select * from beaugan where L_category="SKINCARE" and S_category="AMPOULE/SERUM"`;
-
-    conn.query(sql, function (err, rows) {
-        if (rows) {
-            console.log(rows);
-            response.render("random_result.ejs",{
-                rows : rows
-            })
-        } else {
-            console.log(err);
-        }
-    })
-})
-router.get("/random_skincare_cream",function(request,response){
-
-    let sql = `select * from beaugan where L_category="SKINCARE" and S_category="CREAM" or L_category="SKINCARE" and S_category="LOTION"`;
-
-    conn.query(sql, function (err, rows) {
-        if (rows) {
-            console.log(rows);
-            response.render("random_result.ejs",{
-                rows : rows
-            })
-        } else {
-            console.log(err);
-        }
-    })
-})
-router.get("/random_skincare_lipcare",function(request,response){
-
-    let sql = `select * from beaugan where L_category="SKINCARE" and S_category="LIPCARE"`;
-
-    conn.query(sql, function (err, rows) {
-        if (rows) {
-            console.log(rows);
-            response.render("random_result.ejs",{
-                rows : rows
-            })
-        } else {
-            console.log(err);
-        }
-    })
-})
-
-//바디 추천 라우터
-router.get("/random_body_perfume",function(request,response){
-
-    let sql = `select * from beaugan where L_category="BODY" and S_category="PERFUME"`;
-
-    conn.query(sql, function (err, rows) {
-        if (rows) {
-            console.log(rows);
-            response.render("random_result.ejs",{
-                rows : rows
-            })
-        } else {
-            console.log(err);
-        }
-    })
-})
-router.get("/random_body_hair",function(request,response){
-
-    let sql = `select * from beaugan where L_category="BODY" and S_category="LOTION"`;
-
-    conn.query(sql, function (err, rows) {
-        if (rows) {
-            console.log(rows);
-            response.render("random_result.ejs",{
-                rows : rows
-            })
-        } else {
-            console.log(err);
-        }
-    })
-})
 
 module.exports = router;
 

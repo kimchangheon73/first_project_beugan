@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>r_Question</title>
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <style>
@@ -76,6 +76,23 @@ a, a:link {
 .row{
     text-align: center;
 }
+main{
+  background-color: white;
+}
+body{
+  background-color: rgb(238,238,238);
+}
+
+#box1 {
+          text-align: center;
+          line-height:250px;
+          /* box-shadow: 7px 7px 5px gray; */
+          width:250px;
+          height: 250px;
+          border: none;
+          border-bottom: thick double #32a1ce;
+          box-sizing: border-box;
+      }
 
         
     </style>
@@ -117,64 +134,47 @@ a, a:link {
         </div>
     </header>
 
-    <br><br><p class="title" align = "center">재미로보는 비건제품 추천</p></div>
+    <main class="container my-5 justify-content-center">
+
     <br><br>
     
-    <p class = "Que" align = "center">Q.지금 나에게 필요한 것은?</p>
+    <p class = "Que" align = "center">회원님에게 추천 드릴 제품입니다</p>
+    <%let random1 = Math.floor(Math.random()*rows.length) %>
+    <%let random2 = Math.floor(Math.random()*rows.length) %>
+    <%let random3 = Math.floor(Math.random()*rows.length) %>
+
     <br><br>
-    <!-- <div class="container"> -->
-      
-     
-        <!-- <div class="row gx-5">
-            <div class="col p-5 border-light">
-            
-                <div id="box1"><a href="#">스킨케어</a></div> 
-            </div> 
-            <div class="col p-5 border-light">
-                 <div id="box2"><a href="#">선케어</a></div>
-            </div> 
-            <div class="col p-5 border-light">
-                <div id="box3"><a href="#">메이크업</a></div>
-           </div> 
-            
-          <div class="col-md-4 p-5 border-light">
-            <div id="box4"><a href="#" >클렌징</a></div>
-            </div> 
-  
-            <div class="col p-5 border-light">
-            <div id="box5"><a href="#" >퍼퓸</a></div> 
-            </div> 
+   
+
+    <div class="container">
+      <!-- <h1><%=random1%></h1>
+      <h1><%=random2%></h1>
+      <h1><%=random3%></h1> -->
+
+        <div class="row gx-5">
+          
+              <div class="col p-5 border-light" style="float:none; margin:100 auto;">
+                <a href="<%=rows[random1].purchase_link%>"><div id="box1" style="float:none; margin:0 auto;"><img src="<%=rows[random1].img_link%>" alt="" class="img-fluid"></div> </a>
+                  <div><%=rows[random1].item_name%></div>
+              </div>
+
+              <div class="col p-5 border-light">
+                <a href="<%=rows[random2].purchase_link%>"><div id="box1" style="float:none; margin:0 auto;"><img src="<%=rows[random1].img_link%>" alt="" class="img-fluid"></div></a> 
+                  <div><%=rows[random2].item_name%></div>
+              </div>
+
+              <div class="col p-5 border-light">
+                <a href="<%=rows[random3].purchase_link%>"><div id="box1" style="float:none; margin:0 auto;"><img src="<%=rows[random3].img_link%>" alt="" class="img-fluid"></div></a>
+                  <div><%=rows[random3].item_name%></div>        
+              </div>
         </div>
-    </div> -->
- <div class="container">
-     <div class="row">
-       <div class="col">
-           <a href="./recommend_skin.html"><img src="./img/01.jpg" alt="" class="mx-2 my-3"></a>
-           <a href="http://127.0.0.1:3000/random_sun"><img src="./img/02.jpg" alt="" class="mx-2 my-3"></a>
-            <a href="./recommend_makeup.html"><img src="./img/03.jpg" alt="" class="mx-2 my-3"></a>
-       </div>
-     </div>
-     <div class="row">
-         <div class="col">
-             <a href="./recommend_clean.html"><img src="./img/04.jpg" alt="" class="mx-2 my-3"></a>
-             <a href="./recommend_perfume.html"><img src="./img/05.jpg" alt="" class="mx-2 my-3"></a>
-         </div>   
-         </div>
-         <div class="row">
-             <div class="col">
-
-                 <img src="./img/white.JPG" alt="" class="mx-2 my-5">
-                 <img src="./img/white.JPG" alt="" class="mx-2 my-5">
-                 <img src="./img/white.JPG" alt="" class="mx-2 my-5">
-                 <img src="./img/white.JPG" alt="" class="mx-2 my-5">
-                 
-             </div>   
-             </div>
- </div>
- 
-  
-
-
+        <div class="row">
+          <div class="col">
+            <img src="" alt="" class="mx-2 my-5">
+          </div>
+        </div>
+    </div>
+</main>
 
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
@@ -199,3 +199,4 @@ a, a:link {
       
 </body>
 </html>
+
