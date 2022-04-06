@@ -21,10 +21,19 @@
         }
         
         #dropdownMenuButton1{
-          width: 135px;
           z-index: 0;
         }
+        .i_btn_2{
+          width: 135px;
+          
+          /* text-decoration:none; */
+         
+      
+
+          /* font-weight: bold; */
+        }
         .i_btn_2:hover{
+          width: 135px;
           color: green;
           text-decoration:none;
           background-color: white;
@@ -32,12 +41,35 @@
 
           /* font-weight: bold; */
         }
-        #dropdownMenuButton1:hover{
+        #dropdownMenuButton{ 
           width: 135px;
-          background-color: rgba(255, 255, 255, 0.163);
-          
+          /* background-color: rgba(255, 255, 255, 0.163); */
         }
+        
+     
 
+        @media (max-width: 890px) {
+      ul.nav.col-12 {
+        display: none;
+      }
+
+      div.col-md-3.text-end {
+        flex-grow: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      ul.nav.col-12 {
+        display: none;
+      }
+      div.col-md-3.text-end {
+        flex-grow: 1;
+      }
+      button#dropdownMenuButton1.dropdown-toggle::after{
+        display: none;
+      }
+      
+    }
     </style>
     <!-- <script src="../public/"></script> -->
 </head>
@@ -83,13 +115,12 @@
 </header>
 
     <div class="logo-bar con">
-        
         <div class="menu-bar">
             <div class="menu-box">
                 <ul class="row">
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                         <a class="i_btn_2" href="#"><span>SKINCARE</span></a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -106,8 +137,8 @@
 
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">MAKEUP</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">MAKEUP</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item"><strong>MAKEUP</strong> </a></li>
@@ -122,8 +153,8 @@
 
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">CLEANSING</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">CLEANSING</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item"><strong>CLEANSING</strong> </a></li>
@@ -135,8 +166,8 @@
                     </li>
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">SUN</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">SUN</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/sun_item"><strong>SUN</strong></a></li>
@@ -146,8 +177,8 @@
 
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">BODY</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">BODY</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item"><strong>BODY</strong> </a></li>
@@ -159,8 +190,8 @@
                     </li>
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">OTHER</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">OTHER</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/other_item"><strong>OTHER</strong></a></li>
@@ -168,8 +199,8 @@
                       </div> 
                     </li>
                     <li class="menu"><div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">BRAND</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">BRAND</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/athe">athe</a></li>
@@ -189,25 +220,28 @@
             <img src="../img/pexels-karolina-grabowska-4465124.jpg" alt="너굴맨" height="460px" width="978px">
         </div>
     </div>
-    <div class="list con">
-        
-        <ul class="row"></ul>
 
+    <div class="list con">
+        <div>
+          <ul class="row">
             <% for(let i=0 ; i<rows.length ; i++){%>
                 <li class="cell">
                   <div class="item">
-                   <a href="<%=rows[i].purchase_link%>"><div class="img-box"><img src="<%=rows[i].img_link%>" alt=""></div></a> 
+                   <a href="<%=rows[i].purchase_link%>"><div class="img-box"><img src="<%=rows[i].img_link%>" alt="" class="img-thumbnail"></div></a> 
                    <a href="<%=rows[i].purchase_link%>"><div class="product-name"><%=rows[i].item_name%></div></a>
-                    <div class="product-price"><%=rows[i].strike_price%></div>
-                    <span><button type="button" class="btn btn-success" id="like<%=i%>" onclick="like(<%=i%>)">하트</button></span>
+                    <div class="product-price"><%=rows[i].strike_price%>원</div>
+                    <!-- <span><button type="button" class="btn btn-success" id="like<%=i%>" onclick="like(<%=i%>)">하트</button></span> -->
+                    <button type="button" class="btn btn-danger">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.498 4.498 0 0 1 7.965 13a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242.63 0 1.46-.118 2.152-.242a26.58 26.58 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434zm6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434z"/>
+                      </svg>
+                      위시리스트
+                    </button>
                   </div>
                 </li>
           <% } %> 
-                   
-            
-
         </ul>
-        
     </div>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -215,24 +249,24 @@
 <script>
 
 
-function like(i){
-  //보내야하는 데이터 
-  
+// function like(i){
+//   //보내야하는 데이터 
 
 
-  $.ajax({ 
-    url: "",   //(요청)서버페이지
-    type: "",  //get,post
-    //dataType: "",  //응답받은 데이터 타입
-    data: {"name" : name , "age":age},   //내가 보낼 데이터  
-    success: function(data){
-      alert("성공")
-    }, 
-    error: function (){ 
-      alert("실패")
-    } 
-  });
-}
+
+//   $.ajax({ 
+//     url: "",   //(요청)서버페이지
+//     type: "",  //get,post
+//     //dataType: "",  //응답받은 데이터 타입
+//     data: {"userid" : user.id , "item_name":item_name},   //내가 보낼 데이터  
+//     success: function(data){
+//       alert("성공")
+//     }, 
+//     error: function (){ 
+//       alert("실패")
+//     } 
+//   });
+// }
 
 </script>
 </body>
