@@ -929,12 +929,18 @@ router.get("/mypage_out",function(request,response){
 
 
 router.get('/wish',function(request,response){
-    let purchase_link = request.query.purchase_link
-    let img_link = request.query.img_link
-    let item_name = request.query.item_name
-    let strike_price = request.query.strike_price
+    // let purchase_link = request.query.purchase_link
+    // let img_link = request.query.img_link
+    // let item_name = request.query.item_name
+    // let strike_price = request.query.strike_price
+    let item_id = request.query.id;
+    let item_price = request.query.price;
+    
+    console.log("id값"+item_id);
+    console.log("가격"+item_price);
 
     console.log("위시 라우터 실행");
+
 
 
 })

@@ -226,20 +226,16 @@
           
           <ul class="row">
             <% for(let i=0 ; i<rows.length ; i++){%>
-              <form action="http://127.0.0.1:3000/wish">
+              
                 <li class="cell">
                   <div class="item">
                    <a href="<%=rows[i].purchase_link%>"><div class="img-box"><img src="<%=rows[i].img_link%>" alt="" class="img-thumbnail"></div></a> 
                    <a href="<%=rows[i].purchase_link%>"><div class="product-name"><%=rows[i].item_name%></div></a>
                     <div class="product-price"><%=rows[i].strike_price%>원</div>
                     <!-- <span><button type="button" class="btn btn-success" id="like<%=i%>" onclick="like(<%=i%>)">하트</button></span> -->
-                    <input type="hidden" name="purchase_link" value="<%=rows[i].purchase_link%>">
-                    <input type="hidden" name="img_link" value="<%=rows[i].img_link%>">
-                    <input type="hidden" name="item_name" value="<%=rows[i].item_name%>">
-                    <input type="hidden" name="strike_price" value="<%=rows[i].strike_price%>">
-                    <input type="submit" value="😍위시리스트" class="btn btn-danger">
+                    <button value="😍위시리스트" class="btn btn-danger" onclick="InsertData('+<%=rows[i].item_index%>+'+'+<%=rows[i].strike_price%>+')">
                 </li>
-              </form>
+              
           <% } %> 
         </ul>
       
@@ -248,7 +244,28 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
+function InsertData(result1,result2){
+//1. 해당하는 제품의 ID 값을 가져와야함
+//console.log(result);
 
+$.ajax({
+  url:"/wish",
+  data : {
+    "id" : result1,
+    "price" : result2 
+  },
+
+  success:function(){
+
+    alert("성공");
+  },
+  error:function(){
+    alert("실패");
+  }
+})
+
+
+}
 
 // function like(i){
 //   //보내야하는 데이터 
