@@ -596,7 +596,7 @@ router.post("/login",function(request,response){
         }else{
             console.log("오류가 발생함");
             console.log(err);
-            response.redirect("http://127.0.0.1:5500/public/login_Fail.html")
+            response.redirect("./login_Fail.html")
         }
 
     })
@@ -891,7 +891,41 @@ router.post("/update",function(request,response){
 })
 
 
+router.post("/delete",function(request,response){
 
+    let id = request.body.id;
+    let pw = request.body.pw;
+    let check_pw = request.body.check_pw;
+
+    if(pw==check_pw){
+        let sql = `delete from beaugan_user where id=? and pw=?`;
+    // let sql = `insert into beaugan_user values ("1","1","1","1","1","1","1")`;
+    
+
+    conn.query(sql,[id,pw],function(err,rows){
+        if(rows){
+            delete request.session.user;
+            response.redirect("http://127.0.0.1:5501/public/mypage_out_done.html")
+        }else{
+            console.log(err);
+        }
+    }) 
+    }else{
+        console.log("탈퇴실패");
+        response.render("mypage_out _fail.ejs",{
+            user : request.session.user
+            
+        })
+    }
+   
+})
+
+
+router.get("/mypage_out",function(request,response){
+    response.render("mypage_out.ejs",{
+        user : request.session.user
+    })
+})
 
 
 module.exports = router;
