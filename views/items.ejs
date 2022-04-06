@@ -39,7 +39,7 @@
         }
 
     </style>
-    <script src="../public/"></script>
+    <!-- <script src="../public/"></script> -->
 </head>
 
 <body>
@@ -199,7 +199,7 @@
                    <a href="<%=rows[i].purchase_link%>"><div class="img-box"><img src="<%=rows[i].img_link%>" alt=""></div></a> 
                    <a href="<%=rows[i].purchase_link%>"><div class="product-name"><%=rows[i].item_name%></div></a>
                     <div class="product-price"><%=rows[i].strike_price%></div>
-                    <span><button type="button" class="btn btn-success" id="like">하트</button></span>
+                    <span><button type="button" class="btn btn-success" id="like<%=i%>" onclick="like(<%=i%>)">하트</button></span>
                   </div>
                 </li>
           <% } %> 
@@ -210,6 +210,30 @@
         
     </div>
     <!-- JavaScript Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+
+
+function like(i){
+  //보내야하는 데이터 
+  
+
+
+  $.ajax({ 
+    url: "",   //(요청)서버페이지
+    type: "",  //get,post
+    //dataType: "",  //응답받은 데이터 타입
+    data: {"name" : name , "age":age},   //내가 보낼 데이터  
+    success: function(data){
+      alert("성공")
+    }, 
+    error: function (){ 
+      alert("실패")
+    } 
+  });
+}
+
+</script>
 </body>
 </html>
