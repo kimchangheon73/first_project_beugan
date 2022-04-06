@@ -31,12 +31,35 @@
 
           /* font-weight: bold; */
         }
-        /* #dropdownMenuButton1:hover{
+        /* #dropdownMenuButton1:hover{ 
           width: 135px;
           background-color: rgba(255, 255, 255, 0.163);
-          
         } */
+        
 
+
+        @media (max-width: 890px) {
+      ul.nav.col-12 {
+        display: none;
+      }
+
+      div.col-md-3.text-end {
+        flex-grow: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      ul.nav.col-12 {
+        display: none;
+      }
+      div.col-md-3.text-end {
+        flex-grow: 1;
+      }
+      button#dropdownMenuButton1.dropdown-toggle::after{
+        display: none;
+      }
+      
+    }
     </style>
     <!-- <script src="../public/"></script> -->
 </head>
@@ -188,10 +211,10 @@
             <img src="../img/pexels-karolina-grabowska-4465124.jpg" alt="너굴맨" height="460px" width="978px">
         </div>
     </div>
-    <div class="list con">
-        
-        <ul class="row"></ul>
 
+    <div class="list con">
+        <div>
+          <ul class="row">
             <% for(let i=0 ; i<rows.length ; i++){%>
                 <li class="cell">
                   <div class="item">
