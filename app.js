@@ -7,6 +7,9 @@ const session = require("express-session")
 // 세션 기능을 저장하기 위한 모듈 (mysql)
 const session_mysql_save = require('express-mysql-session')
 
+
+
+
 let DB_info ={
     host: 'project-db-stu.ddns.net',
     user: 'campus_g_0325_6',

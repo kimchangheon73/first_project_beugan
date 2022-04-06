@@ -21,9 +21,23 @@
         }
         
         #dropdownMenuButton1{
-          width: 130px;
+          width: 135px;
+          z-index: 0;
         }
-        
+        .i_btn_2:hover{
+          color: green;
+          text-decoration:none;
+          background-color: white;
+          z-index: 1;
+
+          /* font-weight: bold; */
+        }
+        #dropdownMenuButton1:hover{
+          width: 135px;
+          background-color: rgba(255, 255, 255, 0.163);
+          
+        }
+
     </style>
     <script src="../public/"></script>
 </head>
@@ -76,7 +90,7 @@
                     <li class="menu">
                         <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="#">SKINCARE</a>
+                        <a class="i_btn_2" href="#"><span>SKINCARE</span></a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item"><strong>SKINCARE</strong></a></li>
@@ -146,10 +160,10 @@
                     <li class="menu">
                         <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">other</a>
+                            <a href="#">OTHER</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/other_item"><strong>other</strong></a></li>
+                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/other_item"><strong>OTHER</strong></a></li>
                         </ul>
                       </div> 
                     </li>
