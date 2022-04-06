@@ -905,7 +905,7 @@ router.post("/delete",function(request,response){
     conn.query(sql,[id,pw],function(err,rows){
         if(rows){  
             delete request.session.user;
-            response.redirect("http://127.0.0.1:5501/public/mypage_out_done.html")
+            response.redirect("./mypage_out_done.html")
         }else{
             console.log(err);
         }
