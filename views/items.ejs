@@ -23,7 +23,17 @@
         #dropdownMenuButton1{
           z-index: 0;
         }
+        .i_btn_2{
+          width: 135px;
+          
+          /* text-decoration:none; */
+         
+      
+
+          /* font-weight: bold; */
+        }
         .i_btn_2:hover{
+          width: 135px;
           color: green;
           text-decoration:none;
           background-color: white;
@@ -31,12 +41,12 @@
 
           /* font-weight: bold; */
         }
-        /* #dropdownMenuButton1:hover{ 
+        #dropdownMenuButton{ 
           width: 135px;
-          background-color: rgba(255, 255, 255, 0.163);
-        } */
+          /* background-color: rgba(255, 255, 255, 0.163); */
+        }
         
-
+     
 
         @media (max-width: 890px) {
       ul.nav.col-12 {
@@ -105,13 +115,12 @@
 </header>
 
     <div class="logo-bar con">
-        
         <div class="menu-bar">
             <div class="menu-box">
                 <ul class="row">
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                         <a class="i_btn_2" href="#"><span>SKINCARE</span></a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -128,8 +137,8 @@
 
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">MAKEUP</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">MAKEUP</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item"><strong>MAKEUP</strong> </a></li>
@@ -144,8 +153,8 @@
 
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">CLEANSING</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">CLEANSING</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item"><strong>CLEANSING</strong> </a></li>
@@ -157,8 +166,8 @@
                     </li>
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">SUN</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">SUN</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/sun_item"><strong>SUN</strong></a></li>
@@ -168,8 +177,8 @@
 
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">BODY</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">BODY</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item"><strong>BODY</strong> </a></li>
@@ -181,8 +190,8 @@
                     </li>
                     <li class="menu">
                         <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">OTHER</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">OTHER</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/other_item"><strong>OTHER</strong></a></li>
@@ -190,8 +199,8 @@
                       </div> 
                     </li>
                     <li class="menu"><div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="#">BRAND</a>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="i_btn_2" href="#">BRAND</a>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="http://127.0.0.1:3000/athe">athe</a></li>
@@ -233,7 +242,6 @@
                 </li>
           <% } %> 
         </ul>
-        
     </div>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
