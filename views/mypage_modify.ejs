@@ -81,47 +81,46 @@
         <img src="./img/whiteBG3.png" alt="" class="img-fluid">
 
         <div class="row text-center">
-            <h1 class="my-5">회원정보 수정</h1>
+            <h1 class="my-5"><%=user.nick%>님의 회원정보수정</h1>
         </div>
 
         <div class="container col-lg-6 col-md-10">
             <div class="">
-                <form class="needs-validation justify-content-center" novalidate="">
+                <form class="needs-validation justify-content-center" novalidate="" action="http://127.0.0.1:3000/update" method="post">
                 <div class="row g-3 justify-content-center">
                     <div class="mb-3">
-                        <form action="">
                             <table class="">
                                 <tr>
                                     <td><label for="exampleFormControlInput1" class="form-label" id="idR">아이디</label></td>
-                                    <td>접속자 아이디가 세션으로 들어오겠구먼</td>
+                                    <td><input type="hidden" name="id" value="<%=user.id%>"><%=user.id%></td>
                                 </tr>
                                 <tr>
                                     <td><label for="exampleFormControlInput1" class="form-label">현재 비밀번호</label></td>
-                                    <td><input type="password" class="form-control" id="mod_pw"></td>
+                                    <td><input type="password" class="form-control" id="mod_pw" name="now_pw"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="exampleFormControlInput1" class="form-label">새 비밀번호</label></td>
-                                    <td><input type="password" class="form-control" id="mod_pw"></td>
+                                    <td><input type="password" class="form-control" id="mod_pw" name="new_pw"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="exampleFormControlInput1" class="form-label" id="idR">이름</label></td>
-                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control" name="name"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="exampleFormControlInput1" class="form-label" id="idR">닉네임</label></td>
-                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control" name="nick"></td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <label for="exampleFormControlInput1" class="form-label" id="idR">E-mail</label>
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control"></td>
+                                        <input type="text" class="form-control" name="email"></td>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><label for="exampleFormControlInput1" class="form-label" id="idR">휴대전화</label></td>
-                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control" name="tel"></td>
                                 </tr>
                                 <tr>
                                     <td><label for="exampleFormControlInput1" class="form-label">성별</label></td>
@@ -138,7 +137,6 @@
                                 </tr>
                                 
                             </table>
-                        </form>
                     </div>
                 </div>
         

@@ -854,4 +854,44 @@ router.get("/random_cleansing_body",function(request,response){
     })
 })
 
+
+
+router.get("/mypage_modify",function(request,response){
+    response.render("mypage_modify.ejs",{
+        user : request.session.user
+    })
+})
+
+
+router.post("/update",function(request,response){
+    let id = request.body.id;
+    let now_pw = request.body.now_pw;
+    let new_pw = request.body.new_pw;
+    let nick = request.body.nick;
+    let user_name = request.body.name;
+    let tel = request.body.tel;
+    let email = request.body.email;
+    let gender = request.body.gender;
+
+    let sql = `update beaugan_user set pw = ?, nick=?, user_name=?, tel=?, email=?, gender=? where id=? and pw=?`;
+    // let sql = `insert into beaugan_user values ("1","1","1","1","1","1","1")`;
+    
+
+    conn.query(sql,[new_pw,nick,user_name,tel,email,gender,id,now_pw],function(err,rows){
+        if(rows){
+            console.log("성공");
+            response.render("index.ejs",{
+                user : request.session.user
+            })
+        
+        }else{
+            console.log(err);
+        }
+    })
+})
+
+
+
+
+
 module.exports = router;
