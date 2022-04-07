@@ -888,7 +888,7 @@ router.get("/mypage_out",function(request,response){
 
 
 
-router.get('/wish_send',function(request,response){
+router.get('/wish',function(request,response){
 
     let purchase_link = request.query.purchase_link
     let img_link = request.query.img_link
@@ -909,6 +909,30 @@ router.get('/wish_send',function(request,response){
     })
     console.log("위시리스트 전송 성공");
 })
+
+
+router.get('/mypage_wishList',function(request,response){
+
+    let user_id = request.session.user.id;
+
+    let sql ="select * from wish_list where id=?";
+
+    console.log("위시리스트 라우터 연결성공");
+
+    conn.query(sql,[user_id],function(err,rows){
+        if(rows){
+            response.render("mypage_wishList.ejs",{
+                user : request.session.user,
+                rows : rows
+            })
+            
+        }else{
+            console.log(err);
+        }
+
+    })
+
+ })
 
 
 module.exports = router;
