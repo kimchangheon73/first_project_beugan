@@ -45,6 +45,39 @@
            background-color:grey;
         }
 
+      @media (max-width: 921px) {
+        ul.nav.col-12 {
+          display: none;
+        }
+
+        div.col-md-3.text-end {
+          flex-grow: 1;
+        }
+        #dropdownMenuButton1_h{
+          display: inline-block !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        ul.nav.col-12 {
+          display: none;
+        }
+        div.col-md-3.text-end {
+          flex-grow: 1;
+        }
+        button#dropdownMenuButton1.dropdown-toggle::after{
+          display: none;
+        }
+        #dropdownMenuButton1_h{
+        display: inline-block !important;
+        }
+      }
+      #dropdownMenuButton1_h:hover path{
+          fill: #000 !important;
+      }
+      #dropdownMenuButton1_h{
+        display: none;
+      }
 
     </style>
 </head>
