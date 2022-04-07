@@ -26,6 +26,29 @@
         .dropdown-item:active {
           background-color:grey;
         }
+
+        @media (max-width: 890px) {
+          ul.nav.col-12 {
+          display: none;
+          }
+
+          div.col-md-3.text-end {
+            flex-grow: 1;
+          }
+        }
+
+        @media (max-width: 768px) {
+          ul.nav.col-12 {
+            display: none;
+          }
+          div.col-md-3.text-end {
+            flex-grow: 1;
+          }
+          button#dropdownMenuButton1.dropdown-toggle::after{
+            display: none;
+          }
+          
+        }
     </style>
 
 </head>
@@ -70,14 +93,14 @@
       </div>
     </div>
   </header>
-
+  <img src="../img/위시리스트배경.jpg" alt="너굴맨" class="col-12">
 <main class="container justify-content-center">
   <br>
-    <div class="bn-box con">
+    <!-- <div class="bn-box con">
         <div class="img-box">
             <img src="./img/mp_wishList.png" alt="">
         </div>
-    </div>
+    </div> -->
     <div class="container col-lg-10 col-md-12 pb-5" style="margin: 0 auto;">
 
       <% for(let i=0 ; i<rows.length/4 ; i++){%>
@@ -90,7 +113,7 @@
             <form action="http://127.0.0.1:3000/wish_delete" method="post">
               <input type="hidden" name="item_name" value="<%=rows[4*i].item_name%>">
               <input type="hidden" name="user_id" value="<%=user.id%>">
-              <input type="submit" value="선택취소" class="btn btn-outline-danger">
+              <input type="submit" value="❌선택취소❌" class="btn btn-outline-danger">
             </form>
           </div>
           <%}%>
@@ -103,7 +126,7 @@
              <form action="http://127.0.0.1:3000/wish_delete" method="post">
               <input type="hidden" name="item_name" value="<%=rows[4*i+1].item_name%>">
               <input type="hidden" name="user_id" value="<%=user.id%>">
-              <input type="submit" value="선택취소" class="btn btn-outline-danger">
+              <input type="submit" value="❌선택취소❌" class="btn btn-outline-danger">
             </form>
           </div>
           <%}%>
@@ -116,7 +139,7 @@
               <form action="http://127.0.0.1:3000/wish_delete" method="post">
                 <input type="hidden" name="item_name" value="<%=rows[4*i+2].item_name%>">
                 <input type="hidden" name="user_id" value="<%=user.id%>">
-                <input type="submit" value="선택취소" class="btn btn-outline-danger">
+                <input type="submit" value="❌선택취소❌" class="btn btn-outline-danger">
               </form>
             </div>
           <%}%>
@@ -129,7 +152,7 @@
               <form action="http://127.0.0.1:3000/wish_delete" method="post">
                 <input type="hidden" name="item_name" value="<%=rows[4*i+3].item_name%>">
                 <input type="hidden" name="user_id" value="<%=user.id%>">
-                <input type="submit" value="선택취소" class="btn btn-outline-danger">
+                <input type="submit" value="❌선택취소❌" class="btn btn-outline-danger">
               </form>
             </div>
           <%}%>
