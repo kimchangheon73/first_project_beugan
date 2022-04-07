@@ -19,7 +19,6 @@ router.get("/show_item",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -38,7 +37,6 @@ router.get("/skin_item",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -57,7 +55,6 @@ router.get("/makeup_item",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -76,7 +73,6 @@ router.get("/cleansing_item",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -95,7 +91,6 @@ router.get("/body_item",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -114,7 +109,6 @@ router.get("/sun_item",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -133,7 +127,6 @@ router.get("/other_item",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -152,7 +145,6 @@ router.get("/skin_item_LIPCARE",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -171,7 +163,6 @@ router.get("/skin_item_AMPOULE_SERUM",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -190,7 +181,6 @@ router.get("/skin_item_TONER",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -209,7 +199,6 @@ router.get("/skin_item_CREAM",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -228,7 +217,6 @@ router.get("/skin_item_FACE",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -247,7 +235,6 @@ router.get("/skin_item_LOTION",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -266,7 +253,6 @@ router.get("/makeup_item_BLUSH",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -285,7 +271,6 @@ router.get("/makeup_item_EYE",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -304,7 +289,6 @@ router.get("/makeup_item_BASE",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -323,7 +307,6 @@ router.get("/makeup_item_LIPS",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -342,7 +325,6 @@ router.get("/makeup_item_LIPCARE",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -361,7 +343,6 @@ router.get("/cleansing_item_FACE",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -380,7 +361,6 @@ router.get("/cleansing_item_HAIR",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -399,7 +379,6 @@ router.get("/cleansing_item_BODY",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -418,7 +397,6 @@ router.get("/body_item_LOTION",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -456,7 +434,6 @@ router.get("/body_item_PERFUME",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -475,7 +452,6 @@ router.get("/athe",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -494,7 +470,6 @@ router.get("/melixir",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -513,7 +488,6 @@ router.get("/LUSH",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -532,7 +506,6 @@ router.get("/DearDahlia",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("items",{
                 rows : rows,
                 user : request.session.user
@@ -646,7 +619,6 @@ router.get("/random_makeup_base",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -663,7 +635,6 @@ router.get("/random_makeup_lips",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -680,7 +651,6 @@ router.get("/random_makeup_eye",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -697,7 +667,6 @@ router.get("/random_makeup_blush",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -713,7 +682,6 @@ router.get("/random_skincare_toner",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -728,7 +696,6 @@ router.get("/random_skincare_serum",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -744,7 +711,6 @@ router.get("/random_skincare_cream",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -760,7 +726,6 @@ router.get("/random_skincare_lipcare",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -777,7 +742,6 @@ router.get("/random_body_perfume",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -793,7 +757,6 @@ router.get("/random_body_lotion",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -810,7 +773,6 @@ router.get("/random_cleansing_face",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -827,7 +789,6 @@ router.get("/random_cleansing_hair",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -844,7 +805,6 @@ router.get("/random_cleansing_body",function(request,response){
 
     conn.query(sql, function (err, rows) {
         if (rows) {
-            console.log(rows);
             response.render("random_result.ejs",{
                 rows : rows
             })
@@ -928,21 +888,26 @@ router.get("/mypage_out",function(request,response){
 
 
 
-router.get('/wish',function(request,response){
-    // let purchase_link = request.query.purchase_link
-    // let img_link = request.query.img_link
-    // let item_name = request.query.item_name
-    // let strike_price = request.query.strike_price
-    let item_id = request.query.id;
-    let item_price = request.query.price;
-    
-    console.log("id값"+item_id);
-    console.log("가격"+item_price);
+router.get('/wish_send',function(request,response){
 
-    console.log("위시 라우터 실행");
+    let purchase_link = request.query.purchase_link
+    let img_link = request.query.img_link
+    let item_name = request.query.item_name
+    let strike_price = request.query.strike_price
+    let user_id = request.query.user_id
 
+    let sql ="insert into wish_list values(?,?,?,?,?)";
 
+    conn.query(sql,[user_id,purchase_link,img_link,item_name,strike_price],function(err,rows){
+        if(rows){
+            console.log("성공");
+            
+        }else{
+            console.log(err);
+        }
 
+    })
+    console.log("위시리스트 전송 성공");
 })
 
 

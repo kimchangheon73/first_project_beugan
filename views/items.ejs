@@ -344,8 +344,8 @@
 
     <div class="container col-lg-10 col-md-12 pb-5" style="margin: 0 auto;">
       <% let num1 = parseInt(rows.length/4) %> 
-      <% let num2 = parseInt(rows.length/4*2) %> 
-      <% let num3 = parseInt(rows.length/4*3) %> 
+      <% let num2 = parseInt(rows.length/4)*2 %> 
+      <% let num3 = parseInt(rows.length/4)*3 %> 
 
         <% for(let i=0 ; i<rows.length/4; i++){%>
           <div class="row" style="text-align: center;">
@@ -353,26 +353,69 @@
              <a href="<%=rows[i].purchase_link%>"><div class="img-box"><img src="<%=rows[i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
              <a href="<%=rows[i].purchase_link%>"><div class="product-name my-2"><%=rows[i].item_name%></div></a>
               <div class="product-price mb-2" style="margin: 0 auto;"><%=rows[i].strike_price%>원</div>
-              <button class="btn btn-outline-danger">😍 위시리스트</button>
+              <% if(user!=null){%>
+                <form action="http://127.0.0.1:3000/wish_send">
+              <input type="hidden" name="img_link" value="<%=rows[i].img_link%>">
+              <input type="hidden" name="purchase_link" value="<%=rows[i].purchase_link%>">
+              <input type="hidden" name="item_name" value="<%=rows[i].item_name%>">
+              <input type="hidden" name="strike_price" value="<%=rows[i].strike_price%>">
+              <input type="hidden" name="user_id" value="<%=user.id%>">
+              <input type="submit" value="😍 위시리스트" class="btn btn-outline-danger" onclick="InsertData()">
+            </form>
+            <% }else{%>
+           <% } %> 
             </div>
+
             <div class="col-xl-3 col-lg-6 col-sm-12">
               <a href="<%=rows[num1+i].purchase_link%>"><div class="img-box"><img src="<%=rows[num1+i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
               <a href="<%=rows[num1+i].purchase_link%>"><div class="product-name my-2"><%=rows[num1+i].item_name%></div></a>
                <div class="product-price mb-2"><%=rows[num1+i].strike_price%>원</div>
-               <button class="btn btn-outline-danger">😍 위시리스트</button>
-             </div>
+               <% if(user!=null){%>
+              <form action="http://127.0.0.1:3000/wish_send">
+              <input type="hidden" name="img_link" value="<%=rows[num1+i].img_link%>">
+              <input type="hidden" name="purchase_link" value="<%=rows[num1+i].purchase_link%>">
+              <input type="hidden" name="item_name" value="<%=rows[num1+i].item_name%>">
+              <input type="hidden" name="strike_price" value="<%=rows[num1+i].strike_price%>">
+              <input type="hidden" name="user_id" value="<%=user.id%>">
+              <input type="submit" value="😍 위시리스트" class="btn btn-outline-danger" onclick="InsertData()">
+            </form>
+            <% }else{%>
+           <% } %>
+              </div>
+
              <div class="col-xl-3 col-lg-6 col-sm-12">
               <a href="<%=rows[num2+i].purchase_link%>"><div class="img-box"><img src="<%=rows[num2+i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
               <a href="<%=rows[num2+i].purchase_link%>"><div class="product-name my-2"><%=rows[num2+i].item_name%></div></a>
                <div class="product-price mb-2"><%=rows[num2+i].strike_price%>원</div>
-               <button class="btn btn-outline-danger">😍 위시리스트</button>
-             </div>
+               <% if(user!=null){%>
+                <form action="http://127.0.0.1:3000/wish_send">
+              <input type="hidden" name="img_link" value="<%=rows[num2+i].img_link%>">
+              <input type="hidden" name="purchase_link" value="<%=rows[num2+i].purchase_link%>">
+              <input type="hidden" name="item_name" value="<%=rows[num2+i].item_name%>">
+              <input type="hidden" name="strike_price" value="<%=rows[num2+i].strike_price%>">
+              <input type="hidden" name="user_id" value="<%=user.id%>">
+              <input type="submit" value="😍 위시리스트" class="btn btn-outline-danger" onclick="InsertData()">
+            </form>
+            <% }else{%>
+           <% } %>
+              </div>
+
              <div class="col-xl-3 col-lg-6 col-sm-12">
               <a href="<%=rows[num3+i].purchase_link%>"><div class="img-box"><img src="<%=rows[num3+i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
               <a href="<%=rows[num3+i].purchase_link%>"><div class="product-name my-2"><%=rows[num3+i].item_name%></div></a>
                <div class="product-price mb-2"><%=rows[num3+i].strike_price%>원</div>
-               <button class="btn btn-outline-danger">😍 위시리스트</button>
-             </div>
+               <% if(user!=null){%>
+                <form action="http://127.0.0.1:3000/wish_send">
+              <input type="hidden" name="img_link" value="<%=rows[num3+i].img_link%>">
+              <input type="hidden" name="purchase_link" value="<%=rows[num3+i].purchase_link%>">
+              <input type="hidden" name="item_name" value="<%=rows[num3+i].item_name%>">
+              <input type="hidden" name="strike_price" value="<%=rows[num3+i].strike_price%>">
+              <input type="hidden" name="user_id" value="<%=user.id%>">
+              <input type="submit" value="😍 위시리스트" class="btn btn-outline-danger" onclick="InsertData()">
+            </form>
+            <% }else{%>
+           <% } %>
+              </div>
           </div>
           <br>
             
@@ -409,47 +452,21 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
-// function InsertData(result1,result2){
-// //1. 해당하는 제품의 ID 값을 가져와야함
-// //console.log(result);
 
-// $.ajax({
-//   url:"/wish",
-//   data : {
-//     "id" : result1,
-//     "price" : result2 
-//   },
+function InsertData(){
+//1. 해당하는 제품의 ID 값을 가져와야함
 
-//   success:function(){
+$.ajax({
 
-//     alert("성공");
-//   },
-//   error:function(){
-//     alert("실패");
-//   }
-// })
+  success:function(){
 
+  },
+  error:function(){
 
-// }
+  }
+})
 
-// function like(i){
-//   //보내야하는 데이터 
-
-
-
-//   $.ajax({ 
-//     url: "",   //(요청)서버페이지
-//     type: "",  //get,post
-//     //dataType: "",  //응답받은 데이터 타입
-//     data: {"userid" : user.id , "item_name":item_name},   //내가 보낼 데이터  
-//     success: function(data){
-//       alert("성공")
-//     }, 
-//     error: function (){ 
-//       alert("실패")
-//     } 
-//   });
-// }
+}
 
 </script>
 </body>
