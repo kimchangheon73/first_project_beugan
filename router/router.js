@@ -675,6 +675,7 @@ router.get("/random_makeup_blush",function(request,response){
         }
     })
 })
+
 //스킨케어 추천 라우터
 router.get("/random_skincare_toner",function(request,response){
 
@@ -839,7 +840,6 @@ router.post("/update",function(request,response){
 
     conn.query(sql,[new_pw,nick,user_name,tel,email,gender,id,now_pw],function(err,rows){
         if(rows){
-            console.log("성공");
             response.render("index.ejs",{
                 user : request.session.user
             })
@@ -871,7 +871,6 @@ router.post("/delete",function(request,response){
         }
     }) 
     }else{
-        console.log("탈퇴실패");
         response.render("mypage_out _fail.ejs",{
             user : request.session.user
             
@@ -900,7 +899,6 @@ router.get('/wish',function(request,response){
 
     conn.query(sql,[user_id,purchase_link,img_link,item_name,strike_price],function(err,rows){
         if(rows){
-            console.log("성공");
             
         }else{
             console.log(err);
@@ -915,7 +913,7 @@ router.get('/mypage_wishList',function(request,response){
 
     let user_id = request.session.user.id;
 
-    let sql ="select * from wish_list where id=?";
+    let sql ="select distinct item_name, id, purchase_link, img_link, strike_price from wish_list where id=?";
 
     console.log("위시리스트 라우터 연결성공");
 
@@ -931,6 +929,36 @@ router.get('/mypage_wishList',function(request,response){
         }
 
     })
+
+ })
+
+
+ router.post("/wish_delete",function(request,response){
+    let item_name = request.body.item_name;
+    let user_id = request.body.user_id;
+
+    let sql = "delete  from wish_list where id=? and item_name=?";
+
+    conn.query(sql,[user_id,item_name],function(err,rows){
+    })
+
+
+    let sql2 ="select distinct item_name, id, purchase_link, img_link, strike_price from wish_list where id=?";
+
+    conn.query(sql2,[user_id],function(err,rows){
+        if(rows){
+            response.render("mypage_wishList.ejs",{
+                user : request.session.user,
+                rows : rows
+            })
+            
+        }else{
+            console.log(err);
+        }
+
+    })
+
+
 
  })
 
