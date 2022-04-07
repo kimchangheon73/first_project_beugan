@@ -876,6 +876,11 @@ router.post("/delete",function(request,response){
             
         })
     }
+
+    let sql2 = "delete  from wish_list where id=?";
+
+    conn.query(sql2,[id],function(err,rows){
+    })
    
 })
 
