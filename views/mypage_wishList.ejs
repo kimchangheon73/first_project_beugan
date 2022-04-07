@@ -49,6 +49,12 @@
           }
           
         }
+
+        div.product-name.my-2{
+          color: black;
+          
+          
+        }
     </style>
 
 </head>
@@ -108,7 +114,7 @@
           <% if(rows[4*i] != null) {%>
             <div class="col-xl-3 col-lg-6 col-sm-12">
            <a href="<%=rows[4*i].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-           <a href="<%=rows[4*i].purchase_link%>"><div class="product-name my-2"><%=rows[4*i].item_name%></div></a>
+           <a href="<%=rows[4*i].purchase_link%>" style="text-decoration:none; font-weight: bold;"><div class="product-name my-2"><%=rows[4*i].item_name%></div></a>
             <div class="product-price mb-2" style="margin: 0 auto;"><%=rows[4*i].strike_price%>원</div>
             <form action="http://127.0.0.1:3000/wish_delete" method="post">
               <input type="hidden" name="item_name" value="<%=rows[4*i].item_name%>">
@@ -121,7 +127,7 @@
           <% if(rows[4*i+1] != null) {%>
             <div class="col-xl-3 col-lg-6 col-sm-12">
             <a href="<%=rows[4*i+1].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i+1].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-            <a href="<%=rows[4*i+1].purchase_link%>"><div class="product-name my-2"><%=rows[4*i+1].item_name%></div></a>
+            <a href="<%=rows[4*i+1].purchase_link%>" style="text-decoration:none; font-weight: bold;"><div class="product-name my-2"><%=rows[4*i+1].item_name%></div></a>
              <div class="product-price mb-2"><%=rows[4*i+1].strike_price%>원</div>
              <form action="http://127.0.0.1:3000/wish_delete" method="post">
               <input type="hidden" name="item_name" value="<%=rows[4*i+1].item_name%>">
@@ -134,7 +140,7 @@
           <% if(rows[4*i+2] != null) {%>
             <div class="col-xl-3 col-lg-6 col-sm-12">
               <a href="<%=rows[4*i+2].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i+2].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-              <a href="<%=rows[4*i+2].purchase_link%>"><div class="product-name my-2"><%=rows[4*i+2].item_name%></div></a>
+              <a href="<%=rows[4*i+2].purchase_link%>" style="text-decoration:none; font-weight: bold;"><div class="product-name my-2"><%=rows[4*i+2].item_name%></div></a>
               <div class="product-price mb-2"><%=rows[4*i+2].strike_price%>원</div>
               <form action="http://127.0.0.1:3000/wish_delete" method="post">
                 <input type="hidden" name="item_name" value="<%=rows[4*i+2].item_name%>">
@@ -147,7 +153,7 @@
           <% if(rows[4*i+3] != null) {%>
             <div class="col-xl-3 col-lg-6 col-sm-12">
               <a href="<%=rows[4*i+3].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i+3].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-              <a href="<%=rows[4*i+3].purchase_link%>"><div class="product-name my-2"><%=rows[4*i+3].item_name%></div></a>
+              <a href="<%=rows[4*i+3].purchase_link%>" style="text-decoration:none; font-weight: bold;"><div class="product-name my-2"><%=rows[4*i+3].item_name%></div></a>
               <div class="product-price mb-2"><%=rows[4*i+3].strike_price%>원</div>
               <form action="http://127.0.0.1:3000/wish_delete" method="post">
                 <input type="hidden" name="item_name" value="<%=rows[4*i+3].item_name%>">
@@ -169,19 +175,18 @@
 </main>
 
 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-    <p class="col-md-4 mb-0 text-muted">© 2022 Codingnator, Inc</p>
+  <p class="col-xl-6 col-lg-12 mb-0 text-muted"> <img src="./img/코딩네이터로고.PNG" alt="" height="45"
+      class="mx-3">© 2022 SmartCampus AIClass Codingnator, Inc</p>
 
-    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-    </a>
 
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contents</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Shop</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Recommend</a></li>
-    </ul>
+
+  <ul class="nav col-xl-6 col-lg-12 col-md-12 justify-content-end">
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help10">인공_다람쥐 &nbsp; |</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help11">코코파더 &nbsp;|</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help12">샤이백엔드 &nbsp;|</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help13">인공_왕재수 &nbsp;|</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help14">인공_잘걸렸다</a></li>
+  </ul>
 </footer>
 
 
