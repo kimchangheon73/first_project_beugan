@@ -557,7 +557,8 @@ router.post("/login",function(request,response){
 
             request.session.user = {
                 "id" : rows[0].id,
-                "nick" : rows[0].nick
+                "nick" : rows[0].nick,
+                "pw" : rows[0].pw
             }
 
             // ejs는 쌍다옴표 필요 없음 
@@ -854,13 +855,12 @@ router.post("/update",function(request,response){
 router.post("/delete",function(request,response){
 
     let id = request.body.id;
-    let pw = request.body.pw;
+    let pw = request.session.user.pw;
+    let right_pw = request.body.pw;
     let check_pw = request.body.check_pw;
 
-    if(pw==check_pw){
-        let sql = `delete from beaugan_user where id=? and pw=?`;
-    // let sql = `insert into beaugan_user values ("1","1","1","1","1","1","1")`;
-    
+    if(pw==right_pw && right_pw==check_pw){
+        let sql = `delete from beaugan_user where id=? and pw=?`;    
 
     conn.query(sql,[id,pw],function(err,rows){
         if(rows){  
