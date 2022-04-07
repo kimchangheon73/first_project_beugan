@@ -26,7 +26,40 @@
         body>header, footer{
             background-color: #093023;
         }
+    @media (max-width: 921px) {
+      ul.nav.col-12 {
+        display: none;
+      }
 
+      div.col-md-3.text-end {
+        flex-grow: 1;
+      }
+      #dropdownMenuButton1_h{
+      display: inline-block !important;
+    }
+    }
+
+    @media (max-width: 768px) {
+      ul.nav.col-12 {
+        display: none;
+      }
+      div.col-md-3.text-end {
+        flex-grow: 1;
+      }
+      button#dropdownMenuButton1.dropdown-toggle::after{
+        display: none;
+      }
+      #dropdownMenuButton1_h{
+      display: inline-block !important;
+    }
+      
+    }
+    #dropdownMenuButton1_h:hover path{
+        fill: #000 !important;
+    }
+    #dropdownMenuButton1_h{
+      display: none;
+    }
 
 
     </style>
@@ -50,6 +83,24 @@
 
     <div class="col-md-3 col-sm-2 text-end">
       <div class="dropdown">
+        <!-- 햄버거 메뉴 -->
+        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1_h" data-bs-toggle="dropdown" aria-expanded="false">
+          <!-- <svg viewBox="0 0 100 80" width="30" height="30" fill="white">
+            <rect width="100" height="20" rx="8"></rect>
+            <rect y="30" width="100" height="20" rx="8"></rect>
+            <rect y="60" width="100" height="20" rx="8"></rect>
+          </svg> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light">Home</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_vegan.html" class="nav-link px-2 link-light">About</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_news.html" class="nav-link px-2 link-light">Contents</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light">Shop</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/recommend_start.html" class="nav-link px-2 link-light">Recommend</a></li>
+        </ul>
         <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
