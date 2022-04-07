@@ -341,88 +341,46 @@
         </ul>
     </div> -->
 
-
     <div class="container col-lg-10 col-md-12 pb-5" style="margin: 0 auto;">
-      <% let num1 = parseInt(rows.length/4) %> 
-      <% let num2 = parseInt(rows.length/4)*2 %> 
-      <% let num3 = parseInt(rows.length/4)*3 %> 
 
-        <% for(let i=0 ; i<rows.length/4; i++){%>
-          <div class="row" style="text-align: center;">
+      <% for(let i=0 ; i<rows.length/4 ; i++){%>
+        <div class="row" style="text-align: center;">
+          <% if(rows[4*i] != null) {%>
             <div class="col-xl-3 col-lg-6 col-sm-12">
-             <a href="<%=rows[i].purchase_link%>"><div class="img-box"><img src="<%=rows[i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-             <a href="<%=rows[i].purchase_link%>"><div class="product-name my-2"><%=rows[i].item_name%></div></a>
-              <div class="product-price mb-2" style="margin: 0 auto;"><%=rows[i].strike_price%>원</div>
-              <% if(user!=null){%>
-                <form action="http://127.0.0.1:3000/wish_send">
-              <input type="hidden" name="img_link" value="<%=rows[i].img_link%>">
-              <input type="hidden" name="purchase_link" value="<%=rows[i].purchase_link%>">
-              <input type="hidden" name="item_name" value="<%=rows[i].item_name%>">
-              <input type="hidden" name="strike_price" value="<%=rows[i].strike_price%>">
-              <input type="hidden" name="user_id" value="<%=user.id%>">
-              <input type="submit" value="😍 위시리스트" class="btn btn-outline-danger" onclick="InsertData()">
-            </form>
-            <% }else{%>
-           <% } %> 
-            </div>
-
-            <div class="col-xl-3 col-lg-6 col-sm-12">
-              <a href="<%=rows[num1+i].purchase_link%>"><div class="img-box"><img src="<%=rows[num1+i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-              <a href="<%=rows[num1+i].purchase_link%>"><div class="product-name my-2"><%=rows[num1+i].item_name%></div></a>
-               <div class="product-price mb-2"><%=rows[num1+i].strike_price%>원</div>
-               <% if(user!=null){%>
-              <form action="http://127.0.0.1:3000/wish_send">
-              <input type="hidden" name="img_link" value="<%=rows[num1+i].img_link%>">
-              <input type="hidden" name="purchase_link" value="<%=rows[num1+i].purchase_link%>">
-              <input type="hidden" name="item_name" value="<%=rows[num1+i].item_name%>">
-              <input type="hidden" name="strike_price" value="<%=rows[num1+i].strike_price%>">
-              <input type="hidden" name="user_id" value="<%=user.id%>">
-              <input type="submit" value="😍 위시리스트" class="btn btn-outline-danger" onclick="InsertData()">
-            </form>
-            <% }else{%>
-           <% } %>
-              </div>
-
-             <div class="col-xl-3 col-lg-6 col-sm-12">
-              <a href="<%=rows[num2+i].purchase_link%>"><div class="img-box"><img src="<%=rows[num2+i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-              <a href="<%=rows[num2+i].purchase_link%>"><div class="product-name my-2"><%=rows[num2+i].item_name%></div></a>
-               <div class="product-price mb-2"><%=rows[num2+i].strike_price%>원</div>
-               <% if(user!=null){%>
-                <form action="http://127.0.0.1:3000/wish_send">
-              <input type="hidden" name="img_link" value="<%=rows[num2+i].img_link%>">
-              <input type="hidden" name="purchase_link" value="<%=rows[num2+i].purchase_link%>">
-              <input type="hidden" name="item_name" value="<%=rows[num2+i].item_name%>">
-              <input type="hidden" name="strike_price" value="<%=rows[num2+i].strike_price%>">
-              <input type="hidden" name="user_id" value="<%=user.id%>">
-              <input type="submit" value="😍 위시리스트" class="btn btn-outline-danger" onclick="InsertData()">
-            </form>
-            <% }else{%>
-           <% } %>
-              </div>
-
-             <div class="col-xl-3 col-lg-6 col-sm-12">
-              <a href="<%=rows[num3+i].purchase_link%>"><div class="img-box"><img src="<%=rows[num3+i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-              <a href="<%=rows[num3+i].purchase_link%>"><div class="product-name my-2"><%=rows[num3+i].item_name%></div></a>
-               <div class="product-price mb-2"><%=rows[num3+i].strike_price%>원</div>
-               <% if(user!=null){%>
-                <form action="http://127.0.0.1:3000/wish_send">
-              <input type="hidden" name="img_link" value="<%=rows[num3+i].img_link%>">
-              <input type="hidden" name="purchase_link" value="<%=rows[num3+i].purchase_link%>">
-              <input type="hidden" name="item_name" value="<%=rows[num3+i].item_name%>">
-              <input type="hidden" name="strike_price" value="<%=rows[num3+i].strike_price%>">
-              <input type="hidden" name="user_id" value="<%=user.id%>">
-              <input type="submit" value="😍 위시리스트" class="btn btn-outline-danger" onclick="InsertData()">
-            </form>
-            <% }else{%>
-           <% } %>
-              </div>
+           <a href="<%=rows[4*i].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
+           <a href="<%=rows[4*i].purchase_link%>"><div class="product-name my-2"><%=rows[4*i].item_name%></div></a>
+            <div class="product-price mb-2" style="margin: 0 auto;"><%=rows[4*i].strike_price%>원</div>
+            <button class="btn btn-outline-danger">😍 위시리스트</button>
           </div>
-          <br>
-            
-        <% } %> 
-
-
-    </div>
+          <%}%>
+          <% if(rows[4*i+1] != null) {%>
+            <div class="col-xl-3 col-lg-6 col-sm-12">
+            <a href="<%=rows[4*i+1].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i+1].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
+            <a href="<%=rows[4*i+1].purchase_link%>"><div class="product-name my-2"><%=rows[4*i+1].item_name%></div></a>
+             <div class="product-price mb-2"><%=rows[4*i+1].strike_price%>원</div>
+             <button class="btn btn-outline-danger">😍 위시리스트</button>
+           </div>
+          <%}%>
+          <% if(rows[4*i+2] != null) {%>
+            <div class="col-xl-3 col-lg-6 col-sm-12">
+              <a href="<%=rows[4*i+2].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i+2].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
+              <a href="<%=rows[4*i+2].purchase_link%>"><div class="product-name my-2"><%=rows[4*i+2].item_name%></div></a>
+              <div class="product-price mb-2"><%=rows[4*i+2].strike_price%>원</div>
+              <button class="btn btn-outline-danger">😍 위시리스트</button>
+            </div>
+          <%}%>
+          <% if(rows[4*i+3] != null) {%>
+            <div class="col-xl-3 col-lg-6 col-sm-12">
+              <a href="<%=rows[4*i+3].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i+3].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
+              <a href="<%=rows[4*i+3].purchase_link%>"><div class="product-name my-2"><%=rows[4*i+3].item_name%></div></a>
+              <div class="product-price mb-2"><%=rows[4*i+3].strike_price%>원</div>
+              <button class="btn btn-outline-danger">😍 위시리스트</button>
+            </div>
+          <%}%>
+        </div>
+        <br>
+      <% } %> 
+  </div>
 </main>
 
 
