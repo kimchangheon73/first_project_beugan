@@ -10,6 +10,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
   <style>
     #logo {
       height: 45px;
@@ -55,6 +56,9 @@
       display: none;
     } */
 
+    .dropdown-item:active {
+      background-color: #0e3023af;
+      }
     @media (max-width: 890px) {
       ul.nav.col-12 {
         display: none;
@@ -131,8 +135,8 @@ body{background-color:#f1f1f2}
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       <li><a href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light">Home</a></li>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li><a href="#" class="nav-link px-2 link-light">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li><a href="#" class="nav-link px-2 link-light">Contents</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="http://127.0.0.1:3000/information_vegan.html" class="nav-link px-2 link-light">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="http://127.0.0.1:3000/information_news.html" class="nav-link px-2 link-light">Contents</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <li><a href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light">Shop</a></li>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <li><a href="http://127.0.0.1:3000/recommend_start.html" class="nav-link px-2 link-light">Recommend</a></li>
@@ -141,6 +145,28 @@ body{background-color:#f1f1f2}
      
     <div class="col-md-3 text-end">
       <div class="dropdown">
+<!-- 햄버거 메뉴 -->
+<button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+    <path fill-rule="evenodd"
+      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+  </svg> -->
+  <svg viewBox="0 0 100 80" width="30" height="30">
+    <rect width="100" height="20" rx="8"></rect>
+    <rect y="30" width="100" height="20" rx="8"></rect>
+    <rect y="60" width="100" height="20" rx="8"></rect>
+  </svg>
+</button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light">Home</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_vegan.html" class="nav-link px-2 link-light">About</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_news.html" class="nav-link px-2 link-light">Contents</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light">Shop</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/recommend_start.html" class="nav-link px-2 link-light">Recommend</a></li>
+        </ul>
+
+<!-- 로그인 드롭다운 -->
         <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -284,7 +310,7 @@ body{background-color:#f1f1f2}
                 <img class="pic-1" src="./img/비건설명.png">
                 <h1 class="title fs-3">비건설명 바로가기</h1>
                 <ul class="icon">
-                    <li><a href="http://127.0.0.1:3000/recommend_start.html"><i class="fa fa-search"></i></a></li>
+                    <li><a href="http://127.0.0.1:3000/information_vegan.html"><i class="fa fa-search"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -293,7 +319,7 @@ body{background-color:#f1f1f2}
                 <img class="pic-1" src="./img/비건뉴스.png">
                 <h1 class="title fs-3">비건뉴스 바로가기</h1>
                 <ul class="icon">
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li><a href="http://127.0.0.1:3000/information_post.html"><i class="fa fa-search"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -302,7 +328,7 @@ body{background-color:#f1f1f2}
                 <img class="pic-1" src="./img/비건포스트.png">
                 <h1 class="title fs-3">비건포스트 바로가기</h1>
                 <ul class="icon">
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li><a href="http://127.0.0.1:3000/information_news.html"><i class="fa fa-search"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -319,8 +345,8 @@ body{background-color:#f1f1f2}
       <div class="col-lg-5">
         <img src="../img/추천멘트01.png" alt="" class="img-fluid">
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-4">
-          <button type="button" class="btn btn-outline-success btn-lg px-4 gap-3"><a class=i_btn
-              href="./recommend_start.html">추천상품보러가기</a></button>
+          <button type="button" class="btn btn-outline-success btn-lg px-4 gap-3">
+            <a class=i_btn href="./recommend_start.html">추천상품보러가기</a></button>
         </div>
       </div>
     </div>
