@@ -540,6 +540,7 @@ router.post("/join",function(request,response){
         
         }else{
             console.log(err);
+            response.redirect("./join_fail.html")
         }
     })
 
