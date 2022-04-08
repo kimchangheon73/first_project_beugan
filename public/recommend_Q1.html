@@ -10,12 +10,6 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <style>
-    html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-
-    }
     #logo {
       height: 45px;
     }
@@ -95,8 +89,7 @@
     #help6,
     #help7,
     #help8,
-    #help9,
-    #menu_li {
+    #help9 {
       color: black;
       font-family: Helvetica Nene;
       text-align: end;
@@ -156,21 +149,13 @@
     .row {
       text-align: center;
     }
-
-    main {
-      background-color: white;
-    }
-
-    body {
-      background-color: rgb(238, 238, 238);
-    }
   </style>
 
 
 </head>
 
 <body>
-  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3" id="header">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
 
     <a href="http://127.0.0.1:3000/main"
       class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -192,8 +177,14 @@
 
     <div class="col-md-3 text-end">
       <div class="dropdown">
+        <!-- 햄버거 메뉴 -->
         <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1_h"
           data-bs-toggle="dropdown" aria-expanded="false">
+          <!-- <svg viewBox="0 0 100 80" width="30" height="30" fill="white">
+        <rect width="100" height="20" rx="8"></rect>
+        <rect y="30" width="100" height="20" rx="8"></rect>
+        <rect y="60" width="100" height="20" rx="8"></rect>
+      </svg> -->
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify"
             viewBox="0 0 16 16">
             <path fill-rule="evenodd"
@@ -201,15 +192,15 @@
           </svg>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light" id="menu_li">Home</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light">Home</a></li>
           <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_vegan.html"
-              class="nav-link px-2 link-light" id="menu_li">About</a></li>
+              class="nav-link px-2 link-light">About</a></li>
           <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_news.html"
-              class="nav-link px-2 link-light" id="menu_li">Contents</a></li>
-          <li><a class="dropdown-item" href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light" id="menu_li">Shop</a>
+              class="nav-link px-2 link-light">Contents</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light">Shop</a>
           </li>
           <li><a class="dropdown-item" href="http://127.0.0.1:3000/recommend_start.html"
-              class="nav-link px-2 link-light" id="menu_li">Recommend</a></li>
+              class="nav-link px-2 link-light">Recommend</a></li>
         </ul>
         <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1"
           data-bs-toggle="dropdown" aria-expanded="false">
@@ -220,47 +211,81 @@
               d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
           </svg>
         </button>
-        <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li><a class="dropdown-item" href="./login.html" id="help6">로그인</a></li>
           <li><a class="dropdown-item" href="./Join.html" id="help7">회원가입</a></li>
           <li><a class="dropdown-item" href="#" id="help8">마이페이지</a></li>
           <li><a class="dropdown-item" href="#" id="help9">로그아웃</a></li>
 
-        </ul> -->
+        </ul>
         &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
   </header>
 
-  <main class="container my-5 justify-content-center d-flex flex-column min-vh-100">
-  <div class="main_container">
-       
-        <p class="title" align="center">재미로보는 비건제품 추천</p>
-        
- 
+  <br><br>
+  <p class="title" align="center">재미로보는 비건제품 추천</p>
+  </div>
+  <br><br>
 
-        <p class="Que" align="center">Q.지금 나에게 필요한 것은?</p>
-    
-    
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <a href="./recommend_skin.html"><img src="./img/01.jpg" alt="" class="mx-2 my-3"></a>
-              <a href="http://127.0.0.1:3000/random_sun"><img src="./img/02.jpg" alt="" class="mx-2 my-3"></a>
-              <a href="./recommend_makeup.html"><img src="./img/03.jpg" alt="" class="mx-2 my-3"></a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <a href="./recommend_clean.html"><img src="./img/04.jpg" alt="" class="mx-2 my-3"></a>
-              <a href="./recommend_perfume.html"><img src="./img/05.jpg" alt="" class="mx-2 my-3"></a>
-            </div>
-          </div>
+  <p class="Que" align="center">Q.지금 나에게 필요한 것은?</p>
+  <br><br>
+  <!-- <div class="container"> -->
+
+
+  <!-- <div class="row gx-5">
+            <div class="col p-5 border-light">
+            
+                <div id="box1"><a href="#">스킨케어</a></div> 
+            </div> 
+            <div class="col p-5 border-light">
+                 <div id="box2"><a href="#">선케어</a></div>
+            </div> 
+            <div class="col p-5 border-light">
+                <div id="box3"><a href="#">메이크업</a></div>
+           </div> 
+            
+          <div class="col-md-4 p-5 border-light">
+            <div id="box4"><a href="#" >클렌징</a></div>
+            </div> 
+  
+            <div class="col p-5 border-light">
+            <div id="box5"><a href="#" >퍼퓸</a></div> 
+            </div> 
         </div>
+    </div> -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a href="./recommend_skin.html"><img src="./img/01.jpg" alt="" class="mx-2 my-3"></a>
+        <a href="http://127.0.0.1:3000/random_sun"><img src="./img/02.jpg" alt="" class="mx-2 my-3"></a>
+        <a href="./recommend_makeup.html"><img src="./img/03.jpg" alt="" class="mx-2 my-3"></a>
       </div>
-  </main>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a href="./recommend_clean.html"><img src="./img/04.jpg" alt="" class="mx-2 my-3"></a>
+        <a href="./recommend_perfume.html"><img src="./img/05.jpg" alt="" class="mx-2 my-3"></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
 
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-auto">
+        <img src="./img/white.JPG" alt="" class="mx-2 my-5">
+        <img src="./img/white.JPG" alt="" class="mx-2 my-5">
+        <img src="./img/white.JPG" alt="" class="mx-2 my-5">
+        <img src="./img/white.JPG" alt="" class="mx-2 my-5">
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
     <p class="col-xl-6 col-lg-12 mb-0 text-muted"> <img src="./img/코딩네이터로고.PNG" alt="" height="45"
         class="mx-3">© 2022 SmartCampus AIClass Codingnator, Inc</p>
 
