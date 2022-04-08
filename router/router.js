@@ -892,13 +892,12 @@ router.get("/mypage_out",function(request,response){
 
 
 
-router.get('/wish',function(request,response){
-
-    let purchase_link = request.query.purchase_link
-    let img_link = request.query.img_link
-    let item_name = request.query.item_name
-    let strike_price = request.query.strike_price
-    let user_id = request.query.user_id
+router.post('/wish',function(request,response){
+    let purchase_link = request.body.purchase_link
+    let img_link = request.body.img_link
+    let item_name = request.body.item_name
+    let strike_price = request.body.strike_price
+    let user_id = request.body.user_id
 
     let sql ="insert into wish_list values(?,?,?,?,?)";
 
@@ -911,6 +910,8 @@ router.get('/wish',function(request,response){
 
     })
     console.log("위시리스트 전송 성공");
+    const responseData = {'result': 'ok'}
+    response.send(responseData)
 })
 
 
