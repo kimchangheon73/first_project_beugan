@@ -561,7 +561,6 @@ router.post("/login",function(request,response){
                 "nick" : rows[0].nick,
                 "pw" : rows[0].pw
             }
-
             // ejs는 쌍다옴표 필요 없음 
             response.render("index.ejs",{
                 id : rows[0].id,
@@ -576,8 +575,63 @@ router.post("/login",function(request,response){
 
     })
 
-    
 });
+
+
+router.post("/find_id",function(request,response){
+
+    let name = request.body.name;
+    let email = request.body.email;
+    
+    let sql = "select id from beaugan_user where user_name=? and email=?";
+
+    conn.query(sql,[name,email],function(err,rows){
+        if(rows.length>=1){
+            console.log("아이디 찾기 라우터 연결 성공");
+            response.render("find_result.ejs",{
+                result : rows[0].id,
+                name : name
+            })
+
+        }else{
+            console.log("오류가 발생함");
+            response.redirect("./find_id_fail.html")
+        }
+
+    })
+
+});
+
+
+router.post("/find_pw",function(request,response){
+
+    let id = request.body.id;
+    let email = request.body.email;
+    
+    let sql = "select pw from beaugan_user where id=? and email=?";
+
+    conn.query(sql,[id,email],function(err,rows){
+        if(rows.length>=1){
+            console.log("비밀번호 찾기 라우터 연결 성공");
+            response.render("find_result.ejs",{
+                result : rows[0].pw,
+                name : id
+            })
+
+        }else{
+            console.log("오류가 발생함");
+            console.log(err);
+            response.redirect("./find_pw_fail.html")
+        }
+
+    })
+
+});
+
+
+
+
+
 
 router.get("/logout",function(request,response){
  
