@@ -38,7 +38,6 @@
         }
         /* ALL 버튼 너비, 배경색 */
         .btn.btn-dark.col-12{
-          width: 135px;
           background-color: #849791;
           border:#849791;
         }
@@ -103,6 +102,11 @@
          #dropdownMenuButton1_h{
           display: none;
         }
+
+      .btnC {
+        padding-left: 1px;
+        padding-right: 1px;
+      }
 
         
 
@@ -176,13 +180,14 @@
 
 <main class="container mb-5">
   <br>
-  <div class="container row justify-content-center my-3" style="margin: 0 auto;">
+  <!-- <div class="container row justify-content-center my-3" style="margin: 0 auto;">
     
-    <div class="col my-3">
-      <a  class="i_btn_2" href="http://127.0.0.1:3000/show_item"><button class="btn btn-dark col-12"><span>ALL</span></button></a>
+    
+    <div class="col my-3 btnC" style="text-align: center;">
+      <a  class="i_btn_2" href="http://127.0.0.1:3000/show_item"><button class="btn btn-dark col-12" id="dropdownMenuButton"><span>ALL</span></button></a>
     </div>
 
-    <div class="dropdown col my-3">
+    <div class="dropdown col my-3 btnC" style="text-align: center;">
       <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
       <a class="i_btn_2" href="#"><span>SKINCARE</span></a>
       </button>
@@ -196,7 +201,7 @@
       </ul>
     </div>
 
-    <div class="dropdown col my-3">
+    <div class="dropdown col my-3 btnC" style="text-align: center;">
       <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           <a class="i_btn_2" href="#">MAKEUP</a>
       </button>
@@ -209,7 +214,7 @@
         <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_LIPCARE">LIPCARE</a></li>
       </ul>
     </div>
-    <div class="dropdown col my-3">
+    <div class="dropdown col my-3 btnC" style="text-align: center;">
       <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           <a class="i_btn_2" href="#">CLEANSING</a>
       </button>
@@ -220,7 +225,7 @@
         <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_BODY">BODY</a></li>
       </ul>
     </div>
-    <div class="dropdown col my-3">
+    <div class="dropdown col my-3 btnC" style="text-align: center;">
       <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           <a class="i_btn_2" href="#">SUN</a>
       </button>
@@ -228,18 +233,17 @@
         <li><a class="dropdown-item" href="http://127.0.0.1:3000/sun_item"><strong>SUN</strong></a></li>
       </ul>
     </div> 
-    <div class="dropdown col my-3">
+    <div class="dropdown col my-3 btnC" style="text-align: center;">
       <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           <a class="i_btn_2" href="#">BODY</a>
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item"><strong>BODY</strong> </a></li>
         <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_LOTION">LOTION</a></li>
-        <!-- <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_FACE">FACE</a></li> -->
         <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_PERFUME">PERFUME</a></li>
       </ul>
     </div>
-    <div class="dropdown col my-3">
+    <div class="dropdown col my-3 btnC" style="text-align: center;">
       <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           <a class="i_btn_2" href="#">OTHER</a>
       </button>
@@ -247,7 +251,24 @@
         <li><a class="dropdown-item" href="http://127.0.0.1:3000/other_item"><strong>OTHER</strong></a></li>
       </ul>
     </div> 
-    <div class="dropdown col my-3">
+    <div class="dropdown col my-3 btnC" style="text-align: center;">
+      <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="i_btn_2" href="#">BRAND</a>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/athe">athe</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/melixir">melixir</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/LUSH">LUSH</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/DearDahlia">DearDahlia</a></li>
+      </ul>
+    </div>
+  </div> -->
+  <div class="container row col-xxl-5 col-lg-6 justify-content-center mt-3 mb-1" style="margin: 0 auto; text-align: center;">
+
+    <div class="col col-xxl-4 col-lg-6 btnC">
+      <a  class="i_btn_2" href="http://127.0.0.1:3000/show_item"><button class="btn btn-dark col-12" id="dropdownMenuButton"><span>ALL</span></button></a>
+    </div>
+    <div class="dropdown col col-xxl-4 col-lg-6 btnC">
       <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           <a class="i_btn_2" href="#">BRAND</a>
       </button>
@@ -260,134 +281,76 @@
     </div>
   </div>
 
+  <div class="container row col-xxl-10 col-lg-8 col-md-10 justify-content-center my-3" style="margin: 0 auto; text-align: center;">
+    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="i_btn_2" href="#"><span>SKINCARE</span></a>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item"><strong>SKINCARE</strong></a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_LIPCARE">LIPCARE</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_AMPOULE_SERUM">AMPOULE/SERUM</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_TONER">TONER</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_CREAM">CREAM</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_LOTION">LOTION</a></li>
+      </ul>
+    </div>
 
-<!-- 
+    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="i_btn_2" href="#">MAKEUP</a>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item"><strong>MAKEUP</strong> </a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_BLUSH">BLUSH</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_EYE">EYE</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_BASE">BASE</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_LIPS">LIPS</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_LIPCARE">LIPCARE</a></li>
+      </ul>
+    </div>
+    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="i_btn_2" href="#">CLEANSING</a>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item"><strong>CLEANSING</strong> </a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_FACE">FACE</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_HAIR">HAIR</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_BODY">BODY</a></li>
+      </ul>
+    </div>
+    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="i_btn_2" href="#">SUN</a>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/sun_item"><strong>SUN</strong></a></li>
+      </ul>
+    </div> 
+    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="i_btn_2" href="#">BODY</a>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item"><strong>BODY</strong> </a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_LOTION">LOTION</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_PERFUME">PERFUME</a></li>
+      </ul>
+    </div>
+    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="i_btn_2" href="#">OTHER</a>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="http://127.0.0.1:3000/other_item"><strong>OTHER</strong></a></li>
+      </ul>
+    </div> 
+    
+  </div>
 
 
-    <div class="logo-bar con">
-        <div class="menu-bar">
-            <div class="menu-box">
-                <ul class="row">
-                    <li class="menu">
-                      <div class="dropdown">
-                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a class="i_btn_2" href="#"><span>SKINCARE</span></a>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item"><strong>SKINCARE</strong></a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_LIPCARE">LIPCARE</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_AMPOULE_SERUM">AMPOULE/SERUM</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_TONER">TONER</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_CREAM">CREAM</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_FACE">FACE</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_LOTION">LOTION</a></li>
-                        </ul>
-                      </div>
-                    </li>
 
-                    <li class="menu">
-                        <div class="dropdown">
-                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a class="i_btn_2" href="#">MAKEUP</a>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item"><strong>MAKEUP</strong> </a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_BLUSH">BLUSH</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_EYE">EYE</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_BASE">BASE</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_LIPS">LIPS</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_LIPCARE">LIPCARE</a></li>
-                        </ul>
-                      </div>
-                    </li>
-
-                    <li class="menu">
-                        <div class="dropdown">
-                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a class="i_btn_2" href="#">CLEANSING</a>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item"><strong>CLEANSING</strong> </a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_FACE">FACE</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_HAIR">HAIR</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_BODY">BODY</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="menu">
-                        <div class="dropdown">
-                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a class="i_btn_2" href="#">SUN</a>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/sun_item"><strong>SUN</strong></a></li>
-                        </ul>
-                      </div>  
-                    </li>
-
-                    <li class="menu">
-                        <div class="dropdown">
-                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a class="i_btn_2" href="#">BODY</a>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item"><strong>BODY</strong> </a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_LOTION">LOTION</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_FACE">FACE</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_PERFUME">PERFUME</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="menu">
-                        <div class="dropdown">
-                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a class="i_btn_2" href="#">OTHER</a>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/other_item"><strong>OTHER</strong></a></li>
-                        </ul>
-                      </div> 
-                    </li>
-                    <li class="menu"><div class="dropdown">
-                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a class="i_btn_2" href="#">BRAND</a>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/athe">athe</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/melixir">melixir</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/LUSH">LUSH</a></li>
-                          <li><a class="dropdown-item" href="http://127.0.0.1:3000/DearDahlia">DearDahlia</a></li>
-                        </ul>
-                      </div></li>
-                </ul>
-                
-
-            </div>
-        </div>
-    </div> -->
-    <!-- <div class="bn-box con">
-        <div class="img-box">
-            <img src="../img/pexels-karolina-grabowska-4465124.jpg" alt="너굴맨" height="460px" width="978px">
-        </div>
-    </div> -->
-
-    <!-- <div class="container col-lg-10 col-md-12 align-items-center">
-        <div>
-          
-          <ul class="row align-items-center">
-            <% for(let i=0 ; i<rows.length ; i++){%>
-              
-                <li class="cell">
-                  <div class="item">
-                   <a href="<%=rows[i].purchase_link%>"><div class="img-box"><img src="<%=rows[i].img_link%>" alt="" class="img-thumbnail"></div></a> 
-                   <a href="<%=rows[i].purchase_link%>"><div class="product-name"><%=rows[i].item_name%></div></a>
-                    <div class="product-price"><%=rows[i].strike_price%>원</div>
-                    <button class="btn btn-outline-danger">😍 위시리스트</button>
-                </li>
-              
-          <% } %> 
-        </ul>
-    </div> -->
 
     <div class="container col-lg-10 col-md-12 pb-5" style="margin: 0 auto;">
 
