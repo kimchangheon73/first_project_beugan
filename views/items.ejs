@@ -1,132 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>items</title>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/main.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>items</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css" />
 
-    <style>
-        #logo{
-            height: 45px;
-        }
-        a.dropdown-item{
-            text-align: end;
-        }
-        body>header, footer{
-            background-color: #093023;
-        }
-        
-        #dropdownMenuButton1{
-          z-index: 0;
-        }
-        .i_btn_2{
-          width: 135px;     
-          /* text-decoration:none; */
-          /* font-weight: bold; */
-        }
-        .i_btn_2:hover{
-          width: 135px;
-          color: white;
-          text-decoration:none;
-          z-index: 1;
+  <style>
+    #logo {
+      height: 45px;
+    }
 
-          /* font-weight: bold; */
-        }
-        /* ALL 버튼 너비, 배경색 */
-        .btn.btn-dark.col-12{
-          background-color: #849791;
-          border:#849791;
-        }
+    a.dropdown-item {
+      text-align: end;
+    }
 
-        #dropdownMenuButton{ 
-          width: 135px;
-          /* background-color: rgba(255, 255, 255, 0.163); */
-        }
-        .dropdown-item:active {
-          background-color: #CDD5D3;
-        }
+    body>header,
+    footer {
+      background-color: #093023;
+    }
 
-        /* BRAND 버튼 호버 배경색 */
-        .btn.btn-outline-success.dropdown-toggle:hover{
-          background-color: #093023; 
-        }
-        
-        
-        @media (max-width: 921px) {
-          ul.nav.col-12 {
-          display: none;
-          }
+    #dropdownMenuButton1 {
+      z-index: 0;
+    }
 
-          div.col-md-3.text-end {
-            flex-grow: 1;
-          }
-          #dropdownMenuButton1_h{
-            display: inline-block !important;
-          }
-        }
+    .i_btn_2 {
+      width: 135px;
+      /* text-decoration:none; */
+      /* font-weight: bold; */
+    }
 
-        .btn.btn-success.dropdown-toggle{
-          background-color: #0c412f;
-        }
+    .i_btn_2:hover {
+      width: 135px;
+      color: white;
+      text-decoration: none;
+      z-index: 1;
 
-        @media (max-width: 768px) {
-          ul.nav.col-12 {
-            display: none;
-          }
-          div.col-md-3.text-end {
-            flex-grow: 1;
-          }
-          button#dropdownMenuButton1.dropdown-toggle::after{
-            display: none;
-          }
-          #dropdownMenuButton1_h{
-            display: inline-block !important;
-          }
-          
-        }
+      /* font-weight: bold; */
+    }
 
-        body {
-          background-color: rgb(238, 238, 238);
-        }
+    /* ALL 버튼 너비, 배경색 */
+    .btn.btn-dark.col-12 {
+      background-color: #849791;
+      border: #849791;
+    }
 
-        main {
-            background-color: white;
-        }
-        #dropdownMenuButton1_h:hover path{
-          fill: #000 !important;
-       }
-         #dropdownMenuButton1_h{
-          display: none;
-        }
+    #dropdownMenuButton {
+      width: 135px;
+      /* background-color: rgba(255, 255, 255, 0.163); */
+    }
 
-      .btnC {
-        padding-left: 1px;
-        padding-right: 1px;
+    .dropdown-item:active {
+      background-color: #CDD5D3;
+    }
+
+    /* BRAND 버튼 호버 배경색 */
+    .btn.btn-outline-success.dropdown-toggle:hover {
+      background-color: #093023;
+    }
+
+
+    @media (max-width: 921px) {
+      ul.nav.col-12 {
+        display: none;
       }
 
-        
+      div.col-md-3.text-end {
+        flex-grow: 1;
+      }
 
+      #dropdownMenuButton1_h {
+        display: inline-block !important;
+      }
+    }
 
-    </style>
-    <!-- <script src="../public/"></script> -->
+    .btn.btn-success.dropdown-toggle {
+      background-color: #0c412f;
+    }
+
+    @media (max-width: 768px) {
+      ul.nav.col-12 {
+        display: none;
+      }
+
+      div.col-md-3.text-end {
+        flex-grow: 1;
+      }
+
+      button#dropdownMenuButton1.dropdown-toggle::after {
+        display: none;
+      }
+
+      #dropdownMenuButton1_h {
+        display: inline-block !important;
+      }
+
+    }
+
+    body {
+      background-color: rgb(238, 238, 238);
+    }
+
+    main {
+      background-color: white;
+    }
+
+    #dropdownMenuButton1_h:hover path {
+      fill: #000 !important;
+    }
+
+    #dropdownMenuButton1_h {
+      display: none;
+    }
+
+    .btnC {
+      padding-left: 1px;
+      padding-right: 1px;
+    }
+  </style>
+  <!-- <script src="../public/"></script> -->
 </head>
 
 <body>
   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
-        
-    <a href="http://127.0.0.1:3000/main" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/logo02.PNG" alt="" id="logo">
+
+    <a href="http://127.0.0.1:3000/main"
+      class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/logo02.PNG" alt="" id="logo">
     </a>
-  
+
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       <li><a href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light" id="help">Home</a></li>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li><a href="http://127.0.0.1:3000/information_vegan.html" class="nav-link px-2 link-light" id="help2">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li><a href="http://127.0.0.1:3000/information_news.html" class="nav-link px-2 link-light" id="help3">Contents</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="http://127.0.0.1:3000/information_vegan.html" class="nav-link px-2 link-light" id="help2">About</a>
+      </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="http://127.0.0.1:3000/information_news.html" class="nav-link px-2 link-light" id="help3">Contents</a>
+      </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <li><a href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light" id="help4">Shop</a></li>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <li><a href="http://127.0.0.1:3000/recommend_start.html" class="nav-link px-2 link-light" id="help5">Recommend</a>
@@ -136,51 +150,61 @@
     <div class="col-md-3 text-end">
       <div class="dropdown">
         <!-- 햄버거 메뉴 -->
-        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1_h" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1_h"
+          data-bs-toggle="dropdown" aria-expanded="false">
           <!-- <svg viewBox="0 0 100 80" width="30" height="30" fill="white">
             <rect width="100" height="20" rx="8"></rect>
             <rect y="30" width="100" height="20" rx="8"></rect>
             <rect y="60" width="100" height="20" rx="8"></rect>
           </svg> -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
           </svg>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li><a class="dropdown-item" href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light">Home</a></li>
-          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_vegan.html" class="nav-link px-2 link-light">About</a></li>
-          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_news.html" class="nav-link px-2 link-light">Contents</a></li>
-          <li><a class="dropdown-item" href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light">Shop</a></li>
-          <li><a class="dropdown-item" href="http://127.0.0.1:3000/recommend_start.html" class="nav-link px-2 link-light">Recommend</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_vegan.html"
+              class="nav-link px-2 link-light">About</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_news.html"
+              class="nav-link px-2 link-light">Contents</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light">Shop</a>
+          </li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/recommend_start.html"
+              class="nav-link px-2 link-light">Recommend</a></li>
         </ul>
 
-        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-            </svg>
+        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle"
+            viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+          </svg>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        
-            <%if(user==null){%>	
-                <li><a class="dropdown-item" href="./login.html">로그인</a></li>
-                <li><a class="dropdown-item" href="./Join2.html">회원가입</a></li> 
-            
+
+          <%if(user==null){%>
+            <li><a class="dropdown-item" href="./login.html">로그인</a></li>
+            <li><a class="dropdown-item" href="./Join2.html">회원가입</a></li>
+
             <%}else{%>
-                <li><a class="dropdown-item" href="http://127.0.0.1:3000/mypage_main">마이페이지</a></li>
-                <li><a class="dropdown-item" href="http://127.0.0.1:3000/logout">로그아웃</a></li>
-            <%}%>
+              <li><a class="dropdown-item" href="http://127.0.0.1:3000/mypage_main">마이페이지</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:3000/logout">로그아웃</a></li>
+              <%}%>
 
         </ul>
         &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
-</header>
-<img src="img/상품배경.jpg" alt="너굴맨" class="col-12">
+  </header>
+  <img src="img/상품배경.jpg" alt="너굴맨" class="col-12">
 
-<main class="container mb-5">
-  <br>
-  <!-- <div class="container row justify-content-center my-3" style="margin: 0 auto;">
+  <main class="container mb-5">
+    <br>
+    <!-- <div class="container row justify-content-center my-3" style="margin: 0 auto;">
     
     
     <div class="col my-3 btnC" style="text-align: center;">
@@ -263,91 +287,101 @@
       </ul>
     </div>
   </div> -->
-  <div class="container row col-xxl-5 col-lg-6 justify-content-center mt-3 mb-1" style="margin: 0 auto; text-align: center;">
+    <div class="container row col-xxl-5 col-lg-6 justify-content-center mt-3 mb-1"
+      style="margin: 0 auto; text-align: center;">
 
-    <div class="col col-xxl-4 col-lg-6 btnC">
-      <a  class="i_btn_2" href="http://127.0.0.1:3000/show_item"><button class="btn btn-dark col-12" id="dropdownMenuButton"><span>ALL</span></button></a>
-    </div>
-    <div class="dropdown col col-xxl-4 col-lg-6 btnC">
-      <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="col col-xxl-4 col-lg-6 btnC">
+        <a class="i_btn_2" href="http://127.0.0.1:3000/show_item"><button class="btn btn-dark col-12"
+            id="dropdownMenuButton"><span>ALL</span></button></a>
+      </div>
+      <div class="dropdown col col-xxl-4 col-lg-6 btnC">
+        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-bs-toggle="dropdown" aria-expanded="false">
           <a class="i_btn_2" href="#">BRAND</a>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/athe">athe</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/melixir">melixir</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/LUSH">LUSH</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/DearDahlia">DearDahlia</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container row col-xxl-10 col-lg-8 col-md-10 justify-content-center my-3" style="margin: 0 auto; text-align: center;">
-    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
-      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-      <a class="i_btn_2" href="#"><span>SKINCARE</span></a>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item"><strong>SKINCARE</strong></a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_LIPCARE">LIPCARE</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_AMPOULE_SERUM">AMPOULE/SERUM</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_TONER">TONER</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_CREAM">CREAM</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_LOTION">LOTION</a></li>
-      </ul>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/athe">athe</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/melixir">melixir</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/LUSH">LUSH</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/DearDahlia">DearDahlia</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
-      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    <div class="container row col-xxl-10 col-lg-8 col-md-10 justify-content-center my-3"
+      style="margin: 0 auto; text-align: center;">
+      <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <a class="i_btn_2" href="#"><span>SKINCARE</span></a>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item"><strong>SKINCARE</strong></a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_LIPCARE">LIPCARE</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_AMPOULE_SERUM">AMPOULE/SERUM</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_TONER">TONER</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_CREAM">CREAM</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_LOTION">LOTION</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">
           <a class="i_btn_2" href="#">MAKEUP</a>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item"><strong>MAKEUP</strong> </a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_BLUSH">BLUSH</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_EYE">EYE</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_BASE">BASE</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_LIPS">LIPS</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_LIPCARE">LIPCARE</a></li>
-      </ul>
-    </div>
-    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
-      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item"><strong>MAKEUP</strong> </a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_BLUSH">BLUSH</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_EYE">EYE</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_BASE">BASE</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_LIPS">LIPS</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/makeup_item_LIPCARE">LIPCARE</a></li>
+        </ul>
+      </div>
+      <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">
           <a class="i_btn_2" href="#">CLEANSING</a>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item"><strong>CLEANSING</strong> </a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_FACE">FACE</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_HAIR">HAIR</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_BODY">BODY</a></li>
-      </ul>
-    </div>
-    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
-      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item"><strong>CLEANSING</strong> </a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_FACE">FACE</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_HAIR">HAIR</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/cleansing_item_BODY">BODY</a></li>
+        </ul>
+      </div>
+      <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">
           <a class="i_btn_2" href="#">SUN</a>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/sun_item"><strong>SUN</strong></a></li>
-      </ul>
-    </div> 
-    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
-      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/sun_item"><strong>SUN</strong></a></li>
+        </ul>
+      </div>
+      <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">
           <a class="i_btn_2" href="#">BODY</a>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item"><strong>BODY</strong> </a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_LOTION">LOTION</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_PERFUME">PERFUME</a></li>
-      </ul>
-    </div>
-    <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
-      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item"><strong>BODY</strong> </a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_LOTION">LOTION</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/body_item_PERFUME">PERFUME</a></li>
+        </ul>
+      </div>
+      <div class="dropdown col col-xxl-2 col-lg-4 my-3 btnC" style="text-align: center;">
+        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">
           <a class="i_btn_2" href="#">OTHER</a>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="http://127.0.0.1:3000/other_item"><strong>OTHER</strong></a></li>
-      </ul>
-    </div> 
-    
-  </div>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/other_item"><strong>OTHER</strong></a></li>
+        </ul>
+      </div>
+
+    </div>
 
 
 
@@ -356,141 +390,192 @@
 
       <% for(let i=0 ; i<rows.length/4 ; i++){%>
         <div class="row" style="text-align: center;">
-          <% if(rows[4*i] != null) {%>
+          <% if(rows[4*i] !=null) {%>
             <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6">
-           <a href="<%=rows[4*i].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-           <a href="<%=rows[4*i].purchase_link%>"><div class="product-name my-2"><%=rows[4*i].item_name%></div></a>
-            <div class="product-price mb-2" style="margin: 0 auto;"><%=rows[4*i].strike_price%>원</div>
-            <% if(user!=null){%>
-              <form name="testForm<%=4*i%>">
-                <input type="hidden" name="img_link" value="<%=rows[4*i].img_link%>">
-                <input type="hidden" name="purchase_link" value="<%=rows[4*i].purchase_link%>">
-                <input type="hidden" name="item_name" value="<%=rows[4*i].item_name%>">
-                <input type="hidden" name="strike_price" value="<%=rows[4*i].strike_price%>">
-                <input type="hidden" name="user_id" value="<%=user.id%>">
-                <input type="button" value="❤위시리스트❤" class="btn btn-danger" onclick="InsertData(<%=4*i%>)">
-              </form>
-             <% }%>
-          </div>
-          <%}%>
-
-          <% if(rows[4*i+1] != null) {%>
-            <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6">
-            <a href="<%=rows[4*i+1].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i+1].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-            <a href="<%=rows[4*i+1].purchase_link%>"><div class="product-name my-2"><%=rows[4*i+1].item_name%></div></a>
-             <div class="product-price mb-2"><%=rows[4*i+1].strike_price%>원</div>
-             <% if(user!=null){%>
-              <form name="testForm<%=4*i+1%>">
-                <input type="hidden" name="img_link" value="<%=rows[4*i+1].img_link%>">
-                <input type="hidden" name="purchase_link" value="<%=rows[4*i+1].purchase_link%>">
-                <input type="hidden" name="item_name" value="<%=rows[4*i+1].item_name%>">
-                <input type="hidden" name="strike_price" value="<%=rows[4*i+1].strike_price%>">
-                <input type="hidden" name="user_id" value="<%=user.id%>">
-                <input type="button" value="❤위시리스트❤" class="btn btn-danger" onclick="InsertData(<%=4*i+1%>)">
-              </form>
-             <% }%>
-             <!-- <button class="btn btn-outline-danger">😍 위시리스트</button> -->
-           </div>
-          <%}%>
-
-          <% if(rows[4*i+2] != null) {%>
-            <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6">
-              <a href="<%=rows[4*i+2].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i+2].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-              <a href="<%=rows[4*i+2].purchase_link%>"><div class="product-name my-2"><%=rows[4*i+2].item_name%></div></a>
-              <div class="product-price mb-2"><%=rows[4*i+2].strike_price%>원</div>
+              <div style="height: 303px;">
+                <a href="<%=rows[4*i].purchase_link%>">
+                  <div class="img-box"><img src="<%=rows[4*i].img_link%>" alt="" class="img-thumbnail img-fluid"></div>
+                </a>
+                <a href="<%=rows[4*i].purchase_link%>">
+                  <div class="product-name my-2">
+                    <strong><%=rows[4*i].item_name%></strong>
+                  </div>
+                </a>
+              </div>
+              <div class="product-price mb-2" style="margin: 0 auto;">
+                <%=rows[4*i].strike_price%>원
+              </div>
               <% if(user!=null){%>
-                <form name="testForm<%=4*i+2%>">
-                  <input type="hidden" name="img_link" value="<%=rows[4*i+2].img_link%>">
-                  <input type="hidden" name="purchase_link" value="<%=rows[4*i+2].purchase_link%>">
-                  <input type="hidden" name="item_name" value="<%=rows[4*i+2].item_name%>">
-                  <input type="hidden" name="strike_price" value="<%=rows[4*i+2].strike_price%>">
+                <form name="testForm<%=4*i%>">
+                  <input type="hidden" name="img_link" value="<%=rows[4*i].img_link%>">
+                  <input type="hidden" name="purchase_link" value="<%=rows[4*i].purchase_link%>">
+                  <input type="hidden" name="item_name" value="<%=rows[4*i].item_name%>">
+                  <input type="hidden" name="strike_price" value="<%=rows[4*i].strike_price%>">
                   <input type="hidden" name="user_id" value="<%=user.id%>">
-                  <input type="button" value="❤위시리스트❤" class="btn btn-danger" onclick="InsertData(<%=4*i+2%>)">
+                  <input type="button" value="❤위시리스트❤" class="btn btn-danger" onclick="InsertData(<%=4*i%>)">
                 </form>
-               <% }%>
-              <!-- <button class="btn btn-outline-danger">😍 위시리스트</button> -->
+                <% }%>
             </div>
-          <%}%>
+            <%}%>
 
-          <% if(rows[4*i+3] != null) {%>
-            <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6">
-              <a href="<%=rows[4*i+3].purchase_link%>"><div class="img-box"><img src="<%=rows[4*i+3].img_link%>" alt="" class="img-thumbnail img-fluid"></div></a> 
-              <a href="<%=rows[4*i+3].purchase_link%>"><div class="product-name my-2"><%=rows[4*i+3].item_name%></div></a>
-              <div class="product-price mb-2"><%=rows[4*i+3].strike_price%>원</div>
-              <% if(user!=null){%>
-                <form name="testForm<%=4*i+3%>">
-                  <input type="hidden" name="img_link" value="<%=rows[4*i+3].img_link%>">
-                  <input type="hidden" name="purchase_link" value="<%=rows[4*i+3].purchase_link%>">
-                  <input type="hidden" name="item_name" value="<%=rows[4*i+3].item_name%>">
-                  <input type="hidden" name="strike_price" value="<%=rows[4*i+3].strike_price%>">
-                  <input type="hidden" name="user_id" value="<%=user.id%>">
-                  <input type="button" value="❤위시리스트❤" class="btn btn-danger" onclick="InsertData(<%=4*i+3%>)">
-                </form>
-               <% }%>
-              <!-- <button class="btn btn-outline-danger">😍 위시리스트</button> -->
-            </div>
-          <%}%>
+              <% if(rows[4*i+1] !=null) {%>
+                <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6">
+                  <div style="height: 303px;">
+                    <a href="<%=rows[4*i+1].purchase_link%>">
+                      <div class="img-box"><img src="<%=rows[4*i+1].img_link%>" alt="" class="img-thumbnail img-fluid">
+                      </div>
+                    </a>
+                    <a href="<%=rows[4*i+1].purchase_link%>">
+                      <div class="product-name my-2">
+                        <strong><%=rows[4*i+1].item_name%></strong>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="product-price mb-2">
+                    <%=rows[4*i+1].strike_price%>원
+                  </div>
+                  <% if(user!=null){%>
+                    <form name="testForm<%=4*i+1%>">
+                      <input type="hidden" name="img_link" value="<%=rows[4*i+1].img_link%>">
+                      <input type="hidden" name="purchase_link" value="<%=rows[4*i+1].purchase_link%>">
+                      <input type="hidden" name="item_name" value="<%=rows[4*i+1].item_name%>">
+                      <input type="hidden" name="strike_price" value="<%=rows[4*i+1].strike_price%>">
+                      <input type="hidden" name="user_id" value="<%=user.id%>">
+                      <input type="button" value="❤위시리스트❤" class="btn btn-danger" onclick="InsertData(<%=4*i+1%>)">
+                    </form>
+                    <% }%>
+                      <!-- <button class="btn btn-outline-danger">😍 위시리스트</button> -->
+                </div>
+                <%}%>
+
+                  <% if(rows[4*i+2] !=null) {%>
+                    <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6">
+                      <div style="height: 303px;">
+                        <a href="<%=rows[4*i+2].purchase_link%>">
+                          <div class="img-box"><img src="<%=rows[4*i+2].img_link%>" alt=""
+                              class="img-thumbnail img-fluid"></div>
+                        </a>
+                        <a href="<%=rows[4*i+2].purchase_link%>">
+                          <div class="product-name my-2">
+                            <strong><%=rows[4*i+2].item_name%></strong>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="product-price mb-2">
+                        <%=rows[4*i+2].strike_price%>원
+                      </div>
+                      <% if(user!=null){%>
+                        <form name="testForm<%=4*i+2%>">
+                          <input type="hidden" name="img_link" value="<%=rows[4*i+2].img_link%>">
+                          <input type="hidden" name="purchase_link" value="<%=rows[4*i+2].purchase_link%>">
+                          <input type="hidden" name="item_name" value="<%=rows[4*i+2].item_name%>">
+                          <input type="hidden" name="strike_price" value="<%=rows[4*i+2].strike_price%>">
+                          <input type="hidden" name="user_id" value="<%=user.id%>">
+                          <input type="button" value="❤위시리스트❤" class="btn btn-danger" onclick="InsertData(<%=4*i+2%>)">
+                        </form>
+                        <% }%>
+                          <!-- <button class="btn btn-outline-danger">😍 위시리스트</button> -->
+                    </div>
+                    <%}%>
+
+                      <% if(rows[4*i+3] !=null) {%>
+                        <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6">
+                          <div style="height: 303px;">
+                            <a href="<%=rows[4*i+3].purchase_link%>">
+                              <div class="img-box"><img src="<%=rows[4*i+3].img_link%>" alt=""
+                                  class="img-thumbnail img-fluid"></div>
+                            </a>
+                            <a href="<%=rows[4*i+3].purchase_link%>">
+                              <div class="product-name my-2">
+                                <strong><%=rows[4*i+3].item_name%></strong>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="product-price mb-2">
+                            <%=rows[4*i+3].strike_price%>원
+                          </div>
+                          <% if(user!=null){%>
+                            <form name="testForm<%=4*i+3%>">
+                              <input type="hidden" name="img_link" value="<%=rows[4*i+3].img_link%>">
+                              <input type="hidden" name="purchase_link" value="<%=rows[4*i+3].purchase_link%>">
+                              <input type="hidden" name="item_name" value="<%=rows[4*i+3].item_name%>">
+                              <input type="hidden" name="strike_price" value="<%=rows[4*i+3].strike_price%>">
+                              <input type="hidden" name="user_id" value="<%=user.id%>">
+                              <input type="button" value="❤위시리스트❤" class="btn btn-danger"
+                                onclick="InsertData(<%=4*i+3%>)">
+                            </form>
+                            <% }%>
+                              <!-- <button class="btn btn-outline-danger">😍 위시리스트</button> -->
+                        </div>
+                        <%}%>
 
         </div>
         <br>
-      <% } %> 
+        <% } %>
 
-  </div>
-</main>
-
-
-
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-  <p class="col-md-4 mb-0 text-muted">© 2022 Company, Inc</p>
-
-  <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-  </a>
-
-  <ul class="nav col-md-4 justify-content-end">
-  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-  </ul>
-</footer>
+    </div>
+  </main>
 
 
 
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+    <p class="col-md-4 mb-0 text-muted">© 2022 Company, Inc</p>
+
+    <a href="/"
+      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+  </footer>
 
 
 
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script>
 
-function InsertData(num){
-//1. 해당하는 제품의 ID 값을 가져와야함
 
-  var queryString = $("form[name=testForm"+num+"]").serialize() ; 
-  console.log(queryString)
-  $.ajax({ 
-    type : 'post',
-    url : '/wish', 
-    data : queryString,
-    dataType : 'json',
-    error: function(){ 
-       alert("실패"); 
-    }, 
-    success : function(data){
-       if(data.result == "ok"){
-          alert('위시리스트 담기 완료!');
-       }else{
-          alert('위시리스트 담기 실패..');
-       }
-       } 
-     });
 
-      
-  }
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script>
 
-</script>
+    function InsertData(num) {
+      //1. 해당하는 제품의 ID 값을 가져와야함
+
+      var queryString = $("form[name=testForm" + num + "]").serialize();
+      console.log(queryString)
+      $.ajax({
+        type: 'post',
+        url: '/wish',
+        data: queryString,
+        dataType: 'json',
+        error: function () {
+          alert("실패");
+        },
+        success: function (data) {
+          if (data.result == "ok") {
+            alert('위시리스트 담기 완료!');
+          } else {
+            alert('위시리스트 담기 실패..');
+          }
+        }
+      });
+
+
+    }
+
+  </script>
 </body>
+
 </html>
