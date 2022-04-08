@@ -41,6 +41,12 @@
       width: 100%;
     }
 
+    .mdP {
+      padding-left: 0px;
+      padding-right: 0px;
+
+    }
+
     .i_btn {
       color: green;
       text-decoration: none;
@@ -95,6 +101,24 @@
     #dropdownMenuButton1_h{
       display: none;
     }
+
+    div.info > span {
+      display: none;
+      position: absolute;
+      width: 220px;
+      height: 400px;
+      /* rgba의 a는 투명도(0과 1사이)를 의미 */
+      background-color: rgba(48, 48, 48, 0.5);
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+    }
+    
+
+    div.info:hover {
+      display: flex;
+    }
+
 
     
 
@@ -246,8 +270,8 @@ body{background-color:#f1f1f2}
     </button>
   </div>
 
-  <div class="container">
-    <div class="px-4 py-5 my-2">
+  <div class="container px-4 py-5 my-2">
+    <div class="">
       <h4 class="text-center">Md's pick</h1>
       </h4><br>
       <h1>
@@ -258,19 +282,14 @@ body{background-color:#f1f1f2}
           <div class="col-lg-6 align-self-center"><br>
             <div class="text-center">
               <div class="row row-cols-2 justify-content-start">
-                <img src="https://www.lush.co.kr/data/goods/20/02/06/1000001178/1000001178_main_093.jpg"
-                  class="img-thumbnail mx-auto" alt="">
-                <img src="https://lush.co.kr/data/goods/19/12/49/1000000894/1000000894_detail_052.jpg"
-                  class="img-thumbnail mx-auto" alt="">
+                <a href="https://www.lush.co.kr/goods/goods_view.php?goodsNo=1000001178" class="col mx-auto mdP"><img src="https://www.lush.co.kr/data/goods/20/02/06/1000001178/1000001178_detail_04.jpg" class="img-thumbnail mx-auto" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></a>
+                <a href="https://www.lush.co.kr/goods/goods_view.php?goodsNo=1000000894" class="col mx-auto mdP"><img src="https://lush.co.kr/data/goods/19/12/49/1000000894/1000000894_detail_052.jpg" class="img-thumbnail mx-auto" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></a>
               </div>
               <div class="row row-cols-2 justify-content-start">
-                <img src="https://lush.co.kr/data/goods/19/12/49/1000000878/1000000878_detail_021.jpg"
-                  class="img-thumbnail mx-auto" alt="">
-                <img src="https://lush.co.kr/data/goods/19/12/49/1000000874/1000000874_detail_055.jpg"
-                  class="img-thumbnail mx-auto" alt="">
+                <a href="https://www.lush.co.kr/goods/goods_view.php?goodsNo=1000000878" class="col mx-auto mdP"><img src="https://lush.co.kr/data/goods/19/12/49/1000000878/1000000878_detail_021.jpg" class="img-thumbnail mx-auto" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></a>
+                <a href="https://www.lush.co.kr/goods/goods_view.php?goodsNo=1000000874" class="col mx-auto mdP"><img src="https://lush.co.kr/data/goods/19/12/49/1000000874/1000000874_detail_055.jpg" class="img-thumbnail mx-auto" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></a>
               </div>
             </div>
-
           </div>
 
           <div class="col-lg-6 align-self-center">
@@ -306,7 +325,7 @@ body{background-color:#f1f1f2}
 
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-4">
             <button type="button" class="btn btn-outline-success btn-lg px-4 gap-3"><a class=i_btn
-                href="http://127.0.0.1:3000/show_item ">상품 보러가기</a></button>
+                href="http://127.0.0.1:3000/body_item_PERFUME">상품 보러가기</a></button>
           </div>
         </div>
     </div>
@@ -318,27 +337,27 @@ body{background-color:#f1f1f2}
   <div class="container-fluid">
             
     <div class="row justify-content-center">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-xs-12 mdP">
             <div class="box1">
-                <img class="pic-1" src="./img/비건설명.png">
+                <img class="pic-1" src="./img/비건정보01.png">
                 <h1 class="title fs-3">비건설명 바로가기</h1>
                 <ul class="icon">
                     <li><a href="http://127.0.0.1:3000/information_vegan.html"><i class="fa fa-search"></i></a></li>
                 </ul>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-xs-12 mdP">
             <div class="box1">
-                <img class="pic-1" src="./img/비건뉴스.png">
+                <img class="pic-1" src="./img/비건뉴스01.png">
                 <h1 class="title fs-3">비건뉴스 바로가기</h1>
                 <ul class="icon">
                     <li><a href="http://127.0.0.1:3000/information_news.html"><i class="fa fa-search"></i></a></li>
                 </ul>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-xs-12 mdP">
             <div class="box1">
-                <img class="pic-1" src="./img/비건포스트.png">
+                <img class="pic-1" src="./img/비건포스트01.png">
                 <h1 class="title fs-3">비건포스트 바로가기</h1>
                 <ul class="icon">
                     <li><a href="http://127.0.0.1:3000/information_post.html"><i class="fa fa-search"></i></a></li>
@@ -388,7 +407,23 @@ body{background-color:#f1f1f2}
 
 
   </script>
+  <script src="./js/jquery-3.6.0.js"></script>
+  <script>
+    function zoomIn(event) {
+      event.target.style.transform = "scale(1.1)"; //1.2배 확대
+      event.target.style.zIndex = 1;
+      event.target.style.transition = "all 0.5s";// 속도
+      event.target.style.filter = "brightness(50%)";
+    }
+  
+    function zoomOut(event) {
+      event.target.style.transform = "scale(1)";
+      event.target.style.zIndex = 0;
+      event.target.style.transition = "all 0.5s";
+      event.target.style.filter = "brightness(100%)";
 
+    }
+  </script>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
