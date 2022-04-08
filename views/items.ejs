@@ -36,13 +36,26 @@
 
           /* font-weight: bold; */
         }
+        /* ALL 버튼 너비, 배경색 */
+        .btn.btn-dark.col-12{
+          width: 135px;
+          background-color: #849791;
+          border:#849791;
+        }
+
         #dropdownMenuButton{ 
           width: 135px;
           /* background-color: rgba(255, 255, 255, 0.163); */
         }
         .dropdown-item:active {
-          background-color: grey;
+          background-color: #CDD5D3;
         }
+
+        /* BRAND 버튼 호버 배경색 */
+        .btn.btn-outline-success.dropdown-toggle:hover{
+          background-color: #093023; 
+        }
+        
         
         @media (max-width: 921px) {
           ul.nav.col-12 {
@@ -55,6 +68,10 @@
           #dropdownMenuButton1_h{
             display: inline-block !important;
           }
+        }
+
+        .btn.btn-success.dropdown-toggle{
+          background-color: #0c412f;
         }
 
         @media (max-width: 768px) {
@@ -87,8 +104,7 @@
           display: none;
         }
 
-    
-
+        
 
 
     </style>
@@ -161,9 +177,11 @@
 <main class="container mb-5">
   <br>
   <div class="container row justify-content-center my-3" style="margin: 0 auto;">
+    
     <div class="col my-3">
-      <a href="http://127.0.0.1:3000/show_item"><button class="btn btn-dark col-12">All</button></a>
+      <a  class="i_btn_2" href="http://127.0.0.1:3000/show_item"><button class="btn btn-dark col-12"><span>ALL</span></button></a>
     </div>
+
     <div class="dropdown col my-3">
       <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
       <a class="i_btn_2" href="#"><span>SKINCARE</span></a>
@@ -177,6 +195,7 @@
         <li><a class="dropdown-item" href="http://127.0.0.1:3000/skin_item_LOTION">LOTION</a></li>
       </ul>
     </div>
+
     <div class="dropdown col my-3">
       <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           <a class="i_btn_2" href="#">MAKEUP</a>
