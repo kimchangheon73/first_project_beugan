@@ -12,12 +12,17 @@
   <style>
     #logo {
       height: 45px;
+      padding-left: 6px;
     }
-
+/* 
     a.nav-item {
       text-align: end;
-    }
+    } */
 
+    a.d-flex{
+      font-family:  Helvetica Nene;
+
+    }
     body>header,
     footer {
       background-color: #093023;
@@ -39,6 +44,7 @@
     .contents {
       width: 100%;
     }
+
 
     @font-face {
       font-family: 'Recipekorea';
@@ -158,6 +164,15 @@
     body {
       background-color: rgb(238, 238, 238);
     }
+    #bg0001 {
+      background:url("./img/배경\ 테스트.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      width: 100%;
+      height: 1000px;
+      /* background-image: url(./img/배경\ 테스트.png); */
+    }
   </style>
 
 
@@ -165,58 +180,39 @@
 
 <body>
   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
-
-    <a href="http://127.0.0.1:3000/main"
-      class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./img/logo02.PNG" alt="" id="logo">
+        
+    <a href="http://127.0.0.1:3000/main" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./img/logo02.PNG" alt="" id="logo">
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light" id="help">Home</a></li>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li><a href="http://127.0.0.1:3000/information_vegan.html" class="nav-link px-2 link-light" id="help2">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li><a href="http://127.0.0.1:3000/information_news.html" class="nav-link px-2 link-light" id="help3">Contents</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li><a href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light" id="help4">Shop</a></li>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li><a href="http://127.0.0.1:3000/recommend_start.html" class="nav-link px-2 link-light" id="help5">Recommend</a>
-      </li>
+      <li><a href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light" id="help">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="./information_vegan.html" class="nav-link px-2 link-light" id="help2">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="./information_news.html" class="nav-link px-2 link-light" id="help3">Contents</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light" id="help3">Shop</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="http://127.0.0.1:3000/recommend_start.html" class="nav-link px-2 link-light" id="help3">Recommend</a></li>
     </ul>
 
     <div class="col-md-3 text-end">
       <div class="dropdown">
-         <!-- 햄버거 메뉴 -->
-         <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1_h"
-         data-bs-toggle="dropdown" aria-expanded="false">
-         <!-- <svg viewBox="0 0 100 80" width="30" height="30" fill="white">
-       <rect width="100" height="20" rx="8"></rect>
-       <rect y="30" width="100" height="20" rx="8"></rect>
-       <rect y="60" width="100" height="20" rx="8"></rect>
-     </svg> -->
-         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify"
-           viewBox="0 0 16 16">
-           <path fill-rule="evenodd"
-             d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
-         </svg>
-       </button>
-       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-         <li><a class="dropdown-item" href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light" id="menu_li"">Home</a></li>
-         <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_vegan.html"
-             class="nav-link px-2 link-light"" id="menu_li">About</a></li>
-         <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_news.html"
-             class="nav-link px-2 link-light"" id="menu_li">Contents</a></li>
-         <li><a class="dropdown-item" href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light"" id="menu_li">Shop</a>
-         </li>
-         <li><a class="dropdown-item" href="http://127.0.0.1:3000/recommend_start.html"
-             class="nav-link px-2 link-light"" id="menu_li">Recommend</a></li>
-       </ul>
-        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle"
-            viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-            <path fill-rule="evenodd"
-              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1_h" data-bs-toggle="dropdown" aria-expanded="false">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
           </svg>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light">Home</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_vegan.html" class="nav-link px-2 link-light">About</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_news.html" class="nav-link px-2 link-light">Contents</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light">Shop</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/recommend_start.html" class="nav-link px-2 link-light">Recommend</a></li>
+        </ul>
+        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
         </button>
         <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li><a class="dropdown-item" href="./login.html" id="help6">로그인</a></li>
@@ -224,15 +220,14 @@
           <li><a class="dropdown-item" href="#" id="help8">마이페이지</a></li>
           <li><a class="dropdown-item" href="#" id="help9">로그아웃</a></li>
 
-        </ul> 
-         -->
+        </ul> -->
         &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
-  </header>
+</header>
 
-  <main class="container my-5 justify-content-center d-flex flex-column min-vh-100">
-    <br><br>
+  <!-- <main class="container justify-content-center d-flex flex-column min-vh-100" id="bg0001"> -->
+    <main class="container justify-content-center d-flex flex-column min-vh-100" id="bg0001">
     <p class="title" align="center">재미로 보는 비건제품 추천</p>
     </div>
     <br><br>
@@ -241,7 +236,6 @@
     <br><br>
 
     <div class="container col-12" style="margin: 0 auto;">
-      <img src="./img/whiteBG3.png" alt="" class="img-fluid">
 
       
       <div class="row">
@@ -250,9 +244,6 @@
         </div>
       </div>
       
-      <img src="./img/whiteBG3.png" alt="" class="img-fluid">
-      <img src="./img/whiteBG3.png" alt="" class="img-fluid">
-      <img src="./img/whiteBG3.png" alt="" class="img-fluid">
 
     </div>
   </main>

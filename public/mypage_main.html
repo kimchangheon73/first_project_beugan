@@ -22,7 +22,9 @@
         div.row div{
             margin : 0 auto
         }
-
+        .dropdown-item:active {
+      background-color:grey;
+      }
         body>header, footer{
             background-color: #093023;
         }
@@ -46,7 +48,8 @@
       div.col-md-3.text-end {
         flex-grow: 1;
       }
-      button#dropdownMenuButton1.dropdown-toggle::after{
+      button#dropdownMenuButton1.dropdown-toggle::after,
+      button#dropdownMenuButton1_h.dropdown-toggle::after{
         display: none;
       }
       #dropdownMenuButton1_h{
@@ -108,10 +111,8 @@
             </svg>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">로그인</a></li>
-          <li><a class="dropdown-item" href="#">회원가입</a></li>
-          <li><a class="dropdown-item" href="#">마이페이지</a></li>
-          <li><a class="dropdown-item" href="#">로그아웃</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/mypage_main">마이페이지</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/logout">로그아웃</a></li>
 
         </ul>
         &nbsp;&nbsp;&nbsp;&nbsp;
