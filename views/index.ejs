@@ -47,13 +47,12 @@
 
     }
 
-    .i_btn {
+    a.i_btn {
       color: green;
       text-decoration: none;
-      font-weight: bold;
     }
 
-    .i_btn:hover {
+    a.i_btn:hover {
       color: white;
       text-decoration: none;
       font-weight: bold;
@@ -123,7 +122,9 @@
     }
 
   
-
+    button.btn.btn-outline-success.btn-lg:hover{
+      color: white;
+    }
     
 
     
@@ -328,8 +329,8 @@ body{background-color:#f1f1f2}
 
 
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-4">
-            <button type="button" class="btn btn-outline-success btn-lg px-4 gap-3"><a class=i_btn
-                href="http://127.0.0.1:3000/body_item_PERFUME">상품 보러가기</a></button>
+            <a class=i_btn href="http://127.0.0.1:3000/body_item_PERFUME">
+                <button type="button" class="btn btn-outline-success btn-lg px-4 gap-3"><strong>상품 보러가기</strong></button></a>
           </div>
         </div>
     </div>
@@ -381,8 +382,8 @@ body{background-color:#f1f1f2}
       <div class="col-lg-5">
         <img src="../img/추천멘트01.png" alt="" class="img-fluid">
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-4">
-          <button type="button" class="btn btn-outline-success btn-lg px-4 gap-3">
-            <a class=i_btn href="./recommend_start.html">추천상품보러가기</a></button>
+            <a class=i_btn href="./recommend_start.html"> 
+              <button type="button" class="btn btn-outline-success btn-lg px-4 gap-3"><strong>추천상품보러가기</strong></button></a>
         </div>
       </div>
     </div>
