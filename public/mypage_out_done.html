@@ -120,18 +120,6 @@
               d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
           </svg>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-
-          <%if(user==null){%>
-            <li><a class="dropdown-item" href="./login.html">로그인</a></li>
-            <li><a class="dropdown-item" href="./Join2.html"> 회원가입</a></li>
-          
-          <%}else{%>
-            <li><a class="dropdown-item" href="http://127.0.0.1:3000/mypage_main">마이페이지</a></li>
-            <li><a class="dropdown-item" href="http://127.0.0.1:3000/logout">로그아웃</a></li>
-          <%}%>
-
-        </ul>
             &nbsp;&nbsp;&nbsp;&nbsp;
           </div>
         </div>
@@ -139,14 +127,13 @@
 
   <main class="container my-5">
     <div><img src="./img/whiteBG3.png" alt="" class="img-fluid"></div>
-    <div><img src="./img/whiteBG3.png" alt="" class="img-fluid"></div>
 
 
     <div class="px-4 py-5 my-5 text-center">
-      <img class="d-block mx-auto mb-4 img-fluid" src="./img/logo01.png" alt="">
+      <img class="d-block mx-auto mb-4" src="./img/logo01.png" alt="" style="height: 200px;">
       <p class="display-10 fw-bold fs-1">회원탈퇴 되셨습니다.</p>
       <div class="col-lg-6 mx-auto"><br>
-        <p class="lead mb-4 fs-2">그동안 감사했습니다. <br> 환경과 건강을 위해 <br> 언제든 다시 방문해주세요.</p>
+        <p class="lead mb-4 fs-4">그동안 감사했습니다. <br> 환경과 건강을 위해 <br> 언제든 다시 방문해주세요.</p>
         <br>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
           <a href="http://127.0.0.1:3000/main"><button type="button" class="btn btn-success btn-lg px-4 gap-3"
@@ -165,21 +152,17 @@
 
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-    <p class="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
+    <p class="col-xl-6 col-lg-12 mb-0 text-muted"> <img src="./img/코딩네이터로고.PNG" alt="" height="45"
+        class="mx-3">© 2022 SmartCampus AIClass Codingnator, Inc</p>
 
-    <a href="/"
-      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32">
-        <use xlink:href="#bootstrap"></use>
-      </svg>
-    </a>
 
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+
+    <ul class="nav col-xl-6 col-lg-12 col-md-12 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help10">인공_다람쥐 &nbsp; |</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help11">코코파더 &nbsp;|</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help12">샤이백엔드 &nbsp;|</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help13">인공_왕재수 &nbsp;|</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="help14">인공_잘걸렸다</a></li>
     </ul>
   </footer>
 
