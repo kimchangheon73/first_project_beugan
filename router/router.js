@@ -566,8 +566,6 @@ router.post("/login",function(request,response){
             }
             // ejs는 쌍다옴표 필요 없음 
             response.render("index.ejs",{
-                id : rows[0].id,
-                nick : rows[0].nick,
                 user : request.session.user
             })
         }else{
@@ -884,29 +882,37 @@ router.get("/mypage_modify",function(request,response){
 
 
 router.post("/update",function(request,response){
-    let id = request.body.id;
+    let id = request.session.user.id;
     let now_pw = request.body.now_pw;
     let new_pw = request.body.new_pw;
     let nick = request.body.nick;
     let user_name = request.body.name;
     let tel = request.body.tel;
     let email = request.body.email;
-    let gender = request.body.gender;
 
-    let sql = `update beaugan_user set pw = ?, nick=?, user_name=?, tel=?, email=?, gender=? where id=? and pw=?`;
-    // let sql = `insert into beaugan_user values ("1","1","1","1","1","1","1")`;
+    let sql = `update beaugan_user set pw = ?, nick=?, user_name=?, tel=?, email=? where id=? and pw=?`;
     
+    conn.query(sql,[new_pw, nick, user_name, tel, email, id, now_pw],function(err,rows){
+        if(rows.affectedRows){
+            delete request.session.user;
 
-    conn.query(sql,[new_pw,nick,user_name,tel,email,gender,id,now_pw],function(err,rows){
-        if(rows){
+            request.session.user = {
+                "id" : id,
+                "nick" : nick,
+                "pw" : new_pw,
+                "name":user_name,
+                "email" : email,
+                "tel" : tel
+            }
+
             response.render("index.ejs",{
-                user : request.session.user
+             user : request.session.user
             })
-        
         }else{
             console.log(err);
         }
     })
+  
 })
 
 
