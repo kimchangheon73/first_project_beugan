@@ -45,6 +45,9 @@
       div.col-md-3.text-end {
         flex-grow: 1;
       }
+      #dropdownMenuButton1_h{
+      display: inline-block !important;
+    }
     }
 
     @media (max-width: 768px) {
@@ -56,17 +59,13 @@
         flex-grow: 1;
       }
 
-      button#dropdownMenuButton1.dropdown-toggle::after {
-        display: none;
-      }
-
+      button#dropdownMenuButton1.dropdown-toggle::after,
       button#dropdownMenuButton1_h.dropdown-toggle::after {
         display: none;
       }
+      #dropdownMenuButton1_h{
+      display: inline-block !important;
     }
-
-    div.product-name.my-2 {
-      color: black;
     }
     #dropdownMenuButton1_h:hover path{
         fill: #000 !important;
@@ -74,7 +73,9 @@
     #dropdownMenuButton1_h{
       display: none;
     }
-
+    div.product-name.my-2 {
+      color: black;
+    }
     .bar-txtBox:before {
       content: "";
       display: inline-block;
