@@ -559,7 +559,10 @@ router.post("/login",function(request,response){
             request.session.user = {
                 "id" : rows[0].id,
                 "nick" : rows[0].nick,
-                "pw" : rows[0].pw
+                "pw" : rows[0].pw,
+                "name":rows[0].user_name,
+                "email" : rows[0].email,
+                "tel" : rows[0].tel
             }
             // ejs는 쌍다옴표 필요 없음 
             response.render("index.ejs",{
