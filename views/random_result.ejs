@@ -144,7 +144,15 @@
       width: 100%;
       height: 1000px;
     }
-       
+
+    img.img-fluid{
+      width: 250px;
+      height: 250px;
+    }
+    .border-light{
+      text-align: center;
+
+    }
         
     </style>
 
@@ -226,17 +234,17 @@
         <div class="row ">
               <div class="col border-light" style="float:none; margin:100 auto;">
                 <a href="<%=rows[random1].purchase_link%>"><div id="box1" style="float:none; margin:0 auto;"><img src="<%=rows[random1].img_link%>" alt="" class="img-fluid"></div> </a>
-                  <div><%=rows[random1].item_name%></div>
+                  <div id="name"><strong><br><%=rows[random1].item_name%></strong></div>
               </div>
 
               <div class="col border-light">
                 <a href="<%=rows[random2].purchase_link%>"><div id="box1" style="float:none; margin:0 auto;"><img src="<%=rows[random2].img_link%>" alt="" class="img-fluid"></div></a> 
-                  <div><%=rows[random2].item_name%></div>
+                  <div id="name"><strong><br><%=rows[random2].item_name%></strong></div>
               </div>
 
               <div class="col border-light">
                 <a href="<%=rows[random3].purchase_link%>"><div id="box1" style="float:none; margin:0 auto;"><img src="<%=rows[random3].img_link%>" alt="" class="img-fluid"></div></a>
-                  <div><%=rows[random3].item_name%></div>        
+                  <div id="name"><strong><br><%=rows[random3].item_name%></strong></div>        
               </div>
         </div>
         <div class="row">
