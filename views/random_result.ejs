@@ -136,6 +136,15 @@
     #dropdownMenuButton1_h{
       display: none;
     }
+    #bg0001 {
+      background:url("./img/질문배경4.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      width: 100%;
+      height: 1000px;
+    }
+       
         
     </style>
 
@@ -197,16 +206,16 @@
         </div>
     </header>
 
-    <main class="container my-5 justify-content-center">
+    <main class="container justify-content-center" id="bg0001">
       <img src="./img/white3.JPG" alt="" class="mx-2 my-5">
-    <br><br>
+    <br><br> <br><br>
     
     <p class = "Que" align = "center">회원님에게 추천 드릴 제품입니다</p>
     <%let random1 = Math.floor(Math.random()*rows.length) %>
     <%let random2 = Math.floor(Math.random()*rows.length) %>
     <%let random3 = Math.floor(Math.random()*rows.length) %>
 
-    <br><br>
+    <br><br> <br><br>
    
 
     <div class="container">
@@ -214,18 +223,18 @@
       <h1><%=random2%></h1>
       <h1><%=random3%></h1> -->
 
-        <div class="row gx-5">
-              <div class="col p-5 border-light" style="float:none; margin:100 auto;">
+        <div class="row ">
+              <div class="col border-light" style="float:none; margin:100 auto;">
                 <a href="<%=rows[random1].purchase_link%>"><div id="box1" style="float:none; margin:0 auto;"><img src="<%=rows[random1].img_link%>" alt="" class="img-fluid"></div> </a>
                   <div><%=rows[random1].item_name%></div>
               </div>
 
-              <div class="col p-5 border-light">
+              <div class="col border-light">
                 <a href="<%=rows[random2].purchase_link%>"><div id="box1" style="float:none; margin:0 auto;"><img src="<%=rows[random2].img_link%>" alt="" class="img-fluid"></div></a> 
                   <div><%=rows[random2].item_name%></div>
               </div>
 
-              <div class="col p-5 border-light">
+              <div class="col border-light">
                 <a href="<%=rows[random3].purchase_link%>"><div id="box1" style="float:none; margin:0 auto;"><img src="<%=rows[random3].img_link%>" alt="" class="img-fluid"></div></a>
                   <div><%=rows[random3].item_name%></div>        
               </div>
