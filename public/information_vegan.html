@@ -45,7 +45,7 @@
       div.col-md-3.text-end {
         flex-grow: 1;
       }
-    
+    }
 
     @media (max-width: 768px) {
       ul.nav.col-12 {
@@ -63,26 +63,12 @@
       button#dropdownMenuButton1_h.dropdown-toggle::after {
         display: none;
       }
-      #dropdownMenuButton1_h{
-      display: inline-block !important;
-    }
-      
-    }
-    #dropdownMenuButton1_h:hover path{
-        fill: #000 !important;
-    }
-    #dropdownMenuButton1_h{
-      display: none;
     }
 
     div.product-name.my-2 {
       color: black;
-    }
-    #dropdownMenuButton1_h:hover path{
-        fill: #000 !important;
-    }
-    #dropdownMenuButton1_h{
-      display: none;
+
+
     }
 
     .bar-txtBox:before {
@@ -156,8 +142,7 @@
   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
     <!-- 로고 마진 mx로 줌 -->
     <a href="http://127.0.0.1:3000/main"
-      class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none mx-3">
       <img src="./img/logo02.PNG" alt="" id="logo">
     </a>
     <!-- nbsp텍스트 영역으로 들여옴, col-md 바꿈 -->
@@ -174,9 +159,8 @@
       </li>
     </ul>
 
-    <div class="col-md-3 text-end">
+    <div class="col-md-3 col-sm-2 text-end">
       <div class="dropdown">
-        
         <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1_h"
           data-bs-toggle="dropdown" aria-expanded="false">
 
