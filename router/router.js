@@ -583,6 +583,7 @@ router.post("/find_id",function(request,response){
 
     let name = request.body.name;
     let email = request.body.email;
+    let type = request.body.find_type;
     
     let sql = "select id from beaugan_user where user_name=? and email=?";
 
@@ -591,7 +592,8 @@ router.post("/find_id",function(request,response){
             console.log("아이디 찾기 라우터 연결 성공");
             response.render("find_result.ejs",{
                 result : rows[0].id,
-                name : name
+                name : name,
+                type : type
             })
 
         }else{
@@ -608,7 +610,8 @@ router.post("/find_pw",function(request,response){
 
     let id = request.body.id;
     let email = request.body.email;
-    
+    let type = request.body.find_type;
+
     let sql = "select pw from beaugan_user where id=? and email=?";
 
     conn.query(sql,[id,email],function(err,rows){
@@ -616,7 +619,9 @@ router.post("/find_pw",function(request,response){
             console.log("비밀번호 찾기 라우터 연결 성공");
             response.render("find_result.ejs",{
                 result : rows[0].pw,
-                name : id
+                name : id,
+                type : type
+
             })
 
         }else{
