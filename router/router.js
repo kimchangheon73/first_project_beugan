@@ -1027,6 +1027,9 @@ router.get('/mypage_wishList',function(request,response){
         }
 
     })
+    console.log("위시삭제리스트 전송 성공");
+    const responseData = {'result': 'ok'}
+    response.send(responseData)
 
 
 
