@@ -44,7 +44,44 @@
         main {
           background-color: white;
         }
+        a>label{
+          cursor: pointer;
+        }
+        @media (max-width: 963px) {
+      ul.nav.col-12 {
+        display: none;
+      }
 
+      div.col-md-3.text-end {
+        flex-grow: 1;
+      }
+      #dropdownMenuButton1_h{
+      display: inline-block !important;
+    }
+    }
+
+    @media (max-width: 768px) {
+      ul.nav.col-12 {
+        display: none;
+      }
+      div.col-md-3.text-end {
+        flex-grow: 1;
+      }
+      button#dropdownMenuButton1.dropdown-toggle::after,
+      button#dropdownMenuButton1_h.dropdown-toggle::after{
+        display: none;
+      }
+      #dropdownMenuButton1_h{
+      display: inline-block !important;
+    }
+      
+    }
+    #dropdownMenuButton1_h:hover path{
+        fill: #000 !important;
+    }
+    #dropdownMenuButton1_h{
+      display: none;
+    }
     </style>
 </head>
 <body class="text-center">
@@ -56,15 +93,28 @@
     </a>
     <!-- nbsp텍스트 영역으로 들여옴, col-md 바꿈 -->
     <ul class="nav col-12 col-md-5 mb-2 justify-content-center mb-md-0">
-      <li><a href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light">Home</a></li>
-      <li><a href="#" class="nav-link px-2 link-light">About</a></li>
-      <li><a href="#" class="nav-link px-2 link-light">Contents</a></li>
-      <li><a href="#" class="nav-link px-2 link-light">Shop</a></li>
-      <li><a href="http://127.0.0.1:5501/public/recommend_start.html" class="nav-link px-2 link-light">Recommend</a></li>
+      <li><a href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light" id="help">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="./information_vegan.html" class="nav-link px-2 link-light" id="help2">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="./information_news.html" class="nav-link px-2 link-light" id="help3">Contents</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light">Shop</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="http://127.0.0.1:3000/recommend_start.html" class="nav-link px-2 link-light">Recommend</a></li>
     </ul>
 
     <div class="col-md-3 col-sm-2 text-end">
       <div class="dropdown">
+        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1_h" data-bs-toggle="dropdown" aria-expanded="false">
+   
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/main" class="nav-link px-2 link-light">Home</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_vegan.html" class="nav-link px-2 link-light">About</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/information_news.html" class="nav-link px-2 link-light">Contents</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/show_item" class="nav-link px-2 link-light">Shop</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:3000/recommend_start.html" class="nav-link px-2 link-light">Recommend</a></li>
+        </ul>
         <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -109,8 +159,8 @@
             <button class="w-100 btn btn-lg btn-success" type="submit">로그인</button>
           </div>
           <br>
-          <a href="./find_id.html"><label >아이디 찾기</label></a>
-          <a href="./find_pw.html"><label >비밀번호 찾기</label></a>
+          <a href="./find_id.html"><label >아이디 찾기</label></a> &nbsp;|&nbsp;
+          <a href="./find_pw.html"><label > 비밀번호 찾기</label></a>
 
         </form>
       </div>
