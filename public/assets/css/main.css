@@ -35,10 +35,7 @@ a {
     display: block;
     clear: both;
 }
-.img-box > img {
-    display: block;
-    /* width: 100%; */
-}
+
 /*커스텀*/
 html,
 body {
@@ -57,15 +54,6 @@ body {
     margin-bottom: 20px;
     margin-top: 20px;
 }
-@media ( max-width:700px ) {
-    .top-bn-box-1 {
-        overflow-x:hidden;
-    }
-
-    .top-bn-box-1 > .img-box {
-        margin-left:-50%;
-    }
-}
 
 .menu-box {
     margin-bottom: 20px;
@@ -74,11 +62,26 @@ body {
 .menu-box > ul > li {
     width: calc(100% / 7);
 }
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .menu-box {
         display: none;
     }
+    .img-fluid{
+        width: 242.46px;
+        height: 242.46px;
+    }
 }
+@media ( max-width:768px ) {
+    .top-bn-box-1 {
+        overflow-x:hidden;
+    }
+
+    .top-bn-box-1 > .img-box {
+        margin-left:-50%;
+    }
+
+}
+
 
 .menu-box > ul > li > a {
     display: block;
