@@ -68,8 +68,10 @@
   </style>
 
 </head>
+
 <script  src="//cdn.jsdelivr.net/npm/sweetalert2@10">></script>
 <link rel="stylesheet" href="sweetalert2.min.css">
+
 <body>
 
   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
@@ -148,9 +150,9 @@
           <% if(rows[4*i] !=null) {%>
             <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6" style="text-align: center;">
               <div class="row" style="display: inline-block;">
-              <div style="height: 303px;" width:auto;">
+              <div class="col-12" style="height: 303px; width:auto;">
                 <a href="<%=rows[4*i].purchase_link%>">
-                  <div class="img-box"><img src="<%=rows[4*i].img_link%>" alt="" class="img-thumbnail img-fluid"  style="display: inline-block"></div>
+                  <div class="img-box"><img src="<%=rows[4*i].img_link%>" alt="" class="img-thumbnail img-fluid" style="display: inline-block"></div>
                 </a>
                 <a href="<%=rows[4*i].purchase_link%>" style="text-decoration:none; font-weight: bold;">
                   <div class="product-name my-2">
@@ -169,12 +171,14 @@
               </form>
             </div>
             <%}%>
+
             <% if(rows[4*i+1] !=null) {%>
               <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6" style="text-align: center;">
                 <div class="row" style="display: inline-block;">
-                <div style="height: 303px;" width:auto;">
+                <div class="col-12" style="height: 303px; width:auto;">
                   <a href="<%=rows[4*i+1].purchase_link%>">
-                    <div class="img-box"><img src="<%=rows[4*i+1].img_link%>" alt="" class="img-thumbnail img-fluid"  style="display: inline-block"></div>
+                    <div class="img-box"><img src="<%=rows[4*i+1].img_link%>" alt="" class="img-thumbnail img-fluid" style="display: inline-block">
+                    </div>
                   </a>
                   <a href="<%=rows[4*i+1].purchase_link%>" style="text-decoration:none; font-weight: bold;">
                     <div class="product-name my-2">
@@ -197,9 +201,9 @@
               <% if(rows[4*i+2] !=null) {%>
                 <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6" style="text-align: center;">
                   <div class="row" style="display: inline-block;">
-                  <div style="height: 303px;" width:auto;">
+                  <div class="col-12" style="height: 303px; width:fit-content;">
                     <a href="<%=rows[4*i+2].purchase_link%>">
-                      <div class="img-box"><img src="<%=rows[4*i+2].img_link%>" alt="" class="img-thumbnail img-fluid style="display: inline-block""></div>
+                      <div class="img-box"><img src="<%=rows[4*i+2].img_link%>" alt="" class="img-thumbnail img-fluid" style="display: inline-block"></div>
                     </a>
                     <a href="<%=rows[4*i+2].purchase_link%>" style="text-decoration:none; font-weight: bold; width:fit-content;"">
                       <div class="product-name my-2">
@@ -222,7 +226,7 @@
                 <% if(rows[4*i+3] !=null) {%>
                   <div class="col-xl-3 col-lg-6 col-sm-6 col-xs-6" style="text-align: center;">
                     <div class="row" style="display: inline-block;">
-                    <div style="height: 303px;" width:auto;">
+                    <div class="col-12" style="height: 303px; width:auto;">
                       <a href="<%=rows[4*i+3].purchase_link%>">
                         <div class="img-box"><img src="<%=rows[4*i+3].img_link%>" alt="" class="img-thumbnail img-fluid"  style="display: inline-block"></div>
                       </a>
